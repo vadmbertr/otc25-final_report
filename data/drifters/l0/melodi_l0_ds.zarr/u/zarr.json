@@ -1,13 +1,13 @@
 {
   "shape": [
-    47398
+    47399
   ],
   "data_type": "float64",
   "chunk_grid": {
     "name": "regular",
     "configuration": {
       "chunk_shape": [
-        23699
+        23700
       ]
     }
   },
