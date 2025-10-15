@@ -1,0 +1,75 @@
+@misc{MELODI,
+  title        = {MELODI},
+  year         = {2024},
+  url          = {https://www.eodyn.com/melodi-2/}
+}
+
+@misc{SPOT,
+  title        = {SPOT},
+  year         = {2024},
+  url          = {https://github.com/vadmbertr/otc25-cannelloni}
+}
+
+@article{leguillouVarDynDynamicalJointReconstructions2025,
+  title = {{{VarDyn}}: {{Dynamical Joint-Reconstructions}} of {{Sea Surface Height}} and {{Temperature From Multi-Sensor Satellite Observations}}},
+  shorttitle = {{{VarDyn}}},
+  author = {Le Guillou, Florian and Chapron, Bertrand and Rio, Marie-Helene},
+  year = {2025},
+  journal = {Journal of Advances in Modeling Earth Systems},
+  volume = {17},
+  number = {4},
+  pages = {e2024MS004689},
+  doi = {10.1029/2024MS004689},
+}
+
+@article{bertrandRobustVariationalFramework2025,
+  title = {A {{Robust Variational Framework}} for {{Cyclogeostrophic Ocean Surface Current Retrieval}}},
+  author = {Bertrand, Vadim and Le Sommer, Julien and Vianna Zaia De Almeida, Victor and Samson, Adeline and Cosme, Emmanuel},
+  year = {2025},
+  month = sep,
+  journal = {EGUsphere},
+  pages = {1--22},
+  publisher = {Copernicus GmbH},
+  doi = {10.5194/egusphere-2025-4172},
+  urldate = {2025-10-11},
+  abstract = {{$<$}p{$><$}strong class="journal-contentHeaderColor"{$>$}Abstract.{$<$}/strong{$>$} Estimations of surface currents at submesoscales (1\&ndash;50 km) are crucial for operational applications and environmental monitoring, yet accurately deriving them from satellite observations remains a challenge. While the geostrophic approximation has long been used to infer ocean surface currents from Sea Surface Height (SSH), it neglects nonlinear advection, which can become significant at submesoscales. To address this limitation, we present a robust and efficient variational method for inverting the cyclogeostrophic balance equation, implemented in the open-source Python library {$<$}em{$>$}jaxparrow{$<$}/em{$>$}. Unlike the traditional iterative approaches, our method reformulates the inversion as an optimization problem, providing stable estimates even in regions where a cyclogeostrophic solution may not exist. Using both DUACS and the high-resolution NeurOST SSH products, we demonstrate that cyclogeostrophic corrections become increasingly relevant at finer spatial scales. Validation against drifter-derived velocities shows that our approach consistently improves current estimates in energetic regions, reducing errors by up to 20 \% compared to geostrophy alone in energetic regions of the global ocean. These results support the systematic inclusion of cyclogeostrophic inversion in the analysis of high-resolution SSH fields.{$<$}/p{$>$}},
+  langid = {english},
+  file = {/Users/bertrava/Zotero/storage/7Q7VA9JU/Bertrand et al. - 2025 - A Robust Variational Framework for Cyclogeostrophi.pdf}
+}
+
+@misc{bertrandJaxparrow2025,
+  title = {Jaxparrow},
+  author = {Bertrand, Vadim and Vianna Zaia De Almeida, Victor and Le Sommer, Julien and Cosme, Emmanuel},
+  year = {2025},
+  doi = {10.5281/zenodo.14871648},
+  abstract = {A package for computing the inversion of the cyclogeostrophic balance based on a variational formulation approach, using JAX.},
+  howpublished = {Zenodo}
+}
+
+@dataset{SeaSurfaceWind,
+  title = {Global Ocean Hourly Sea Surface Wind and Stress from Scatterometer and Model},
+  author = {WIND_GLO_PHY_L4_NRT_012_004},
+  creator = {KNMI},
+  doi = {10.48670/moi-00305},
+  publisher = {E.U. Copernicus Marine Service Information (CMEMS). Marine Data Store (MDS)},
+  year = {2024}
+}
+
+@dataset{SeaState,
+  title = {Global Ocean Waves Analysis and Forecast},
+  author = {GLOBAL_ANALYSISFORECAST_WAV_001_027},
+  creator = {Mercator Ocean International},
+  doi = {10.48670/moi-00017},
+  publisher = {E.U. Copernicus Marine Service Information (CMEMS). Marine Data Store (MDS)},
+  year = {2023}
+}
+
+@article{elipotGlobalSurfaceDrifter2016,
+  title = {A Global Surface Drifter Data Set at Hourly Resolution},
+  author = {Elipot, Shane and Lumpkin, Rick and Perez, Renellys C. and Lilly, Jonathan M. and Early, Jeffrey J. and Sykulski, Adam M.},
+  year = {2016},
+  journal = {Journal of Geophysical Research: Oceans},
+  volume = {121},
+  number = {5},
+  doi = {10.1002/2016JC011716},
+}

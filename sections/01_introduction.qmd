@@ -1,0 +1,11 @@
+# Introduction
+
+This project aims to reconstruct the trajectory of drifters deployed during the expedition and to better understand how physical processes govern their motion. 
+We thus need to take into account the satellite measurements of sea surface deformation, wave induced currents and wind speed. 
+We employ a two folded approach: (i) in first approximation a linear combination of the surface currents, Stokes drift and direct wind-force, and (ii) the full equations describing the dynamics of floating intertial particles in the ocean -the Maxey-Riley set. 
+These two methods will allow us to decompose and analyze the individual forces governing the drifter's motion, providing deeper insights into the underlying dynamics.
+
+We focus here on deterministic modellings of the drift. 
+However, given the inherent chaotic nature of the problem and the uncertainties carried by our observations of oceanic and atmospheric variables, stochastic approaches might be relevant to simulate ensemble of probable and realistic trajectories, rather than one *incorrect* estimate. 
+One challenge is to control the dispersion of simulated ensembles to accurately cover the distribution of possible trajectories. 
+To address this question we study the relative dispersion over time of several ensembles of drifters deployed at the same space-time position.

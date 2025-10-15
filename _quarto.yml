@@ -1,0 +1,19 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - custom.scss
+    comments:
+      hypothesis: true
+    code-fold: true
+  pdf:
+    link-citations: true
+
+execute:
+  freeze: true

@@ -1,0 +1,5 @@
+.DS_Store
+_manuscript
+.quarto
+src/__pycache__
+index.fdb_latexmk
