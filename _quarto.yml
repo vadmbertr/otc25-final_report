@@ -14,6 +14,8 @@ format:
     code-fold: true
   pdf:
     link-citations: true
+    pdf-engine: xelatex
+
 
 execute:
   freeze: true
