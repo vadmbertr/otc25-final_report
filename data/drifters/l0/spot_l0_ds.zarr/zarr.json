@@ -41,7 +41,7 @@
           }
         ],
         "attributes": {
-          "long_name": "Time difference between two consecutive observations",
+          "long_name": "Time interval between successive observations",
           "units": "seconds",
           "coordinates": "time",
           "_FillValue": "AAAAAAAA+H8="
@@ -53,11 +53,11 @@
         "node_type": "array",
         "storage_transformers": []
       },
-      "drifter_id": {
+      "rowsize": {
         "shape": [
           20
         ],
-        "data_type": "string",
+        "data_type": "int64",
         "chunk_grid": {
           "name": "regular",
           "configuration": {
@@ -72,51 +72,7 @@
             "separator": "/"
           }
         },
-        "fill_value": "",
-        "codecs": [
-          {
-            "name": "vlen-utf8",
-            "configuration": {}
-          },
-          {
-            "name": "zstd",
-            "configuration": {
-              "level": 0,
-              "checksum": false
-            }
-          }
-        ],
-        "attributes": {
-          "long_name": "Unique identifier of each drifter",
-          "coordinates": "id"
-        },
-        "dimension_names": [
-          "rows"
-        ],
-        "zarr_format": 3,
-        "node_type": "array",
-        "storage_transformers": []
-      },
-      "u": {
-        "shape": [
-          24503
-        ],
-        "data_type": "float64",
-        "chunk_grid": {
-          "name": "regular",
-          "configuration": {
-            "chunk_shape": [
-              24503
-            ]
-          }
-        },
-        "chunk_key_encoding": {
-          "name": "default",
-          "configuration": {
-            "separator": "/"
-          }
-        },
-        "fill_value": 0.0,
+        "fill_value": 0,
         "codecs": [
           {
             "name": "bytes",
@@ -133,13 +89,11 @@
           }
         ],
         "attributes": {
-          "long_name": "Zonal velocity component between two consecutive observations",
-          "units": "meters per second",
-          "coordinates": "time",
-          "_FillValue": "AAAAAAAA+H8="
+          "long_name": "Number of observations per trajectory",
+          "coordinates": "id"
         },
         "dimension_names": [
-          "obs"
+          "rows"
         ],
         "zarr_format": 3,
         "node_type": "array",
@@ -193,11 +147,11 @@
         "node_type": "array",
         "storage_transformers": []
       },
-      "rowsize": {
+      "drifter_id": {
         "shape": [
           20
         ],
-        "data_type": "int64",
+        "data_type": "string",
         "chunk_grid": {
           "name": "regular",
           "configuration": {
@@ -212,13 +166,11 @@
             "separator": "/"
           }
         },
-        "fill_value": 0,
+        "fill_value": "",
         "codecs": [
           {
-            "name": "bytes",
-            "configuration": {
-              "endian": "little"
-            }
+            "name": "vlen-utf8",
+            "configuration": {}
           },
           {
             "name": "zstd",
@@ -229,148 +181,8 @@
           }
         ],
         "attributes": {
-          "long_name": "Number of observations per trajectory",
+          "long_name": "Unique identifier of each drifter",
           "coordinates": "id"
-        },
-        "dimension_names": [
-          "rows"
-        ],
-        "zarr_format": 3,
-        "node_type": "array",
-        "storage_transformers": []
-      },
-      "time": {
-        "shape": [
-          24503
-        ],
-        "data_type": "int64",
-        "chunk_grid": {
-          "name": "regular",
-          "configuration": {
-            "chunk_shape": [
-              24503
-            ]
-          }
-        },
-        "chunk_key_encoding": {
-          "name": "default",
-          "configuration": {
-            "separator": "/"
-          }
-        },
-        "fill_value": 0,
-        "codecs": [
-          {
-            "name": "bytes",
-            "configuration": {
-              "endian": "little"
-            }
-          },
-          {
-            "name": "zstd",
-            "configuration": {
-              "level": 0,
-              "checksum": false
-            }
-          }
-        ],
-        "attributes": {
-          "long_name": "Time of each observation",
-          "units": "seconds since 2025-05-12 12:51:31",
-          "calendar": "proleptic_gregorian"
-        },
-        "dimension_names": [
-          "obs"
-        ],
-        "zarr_format": 3,
-        "node_type": "array",
-        "storage_transformers": []
-      },
-      "dy": {
-        "shape": [
-          24503
-        ],
-        "data_type": "float64",
-        "chunk_grid": {
-          "name": "regular",
-          "configuration": {
-            "chunk_shape": [
-              24503
-            ]
-          }
-        },
-        "chunk_key_encoding": {
-          "name": "default",
-          "configuration": {
-            "separator": "/"
-          }
-        },
-        "fill_value": 0.0,
-        "codecs": [
-          {
-            "name": "bytes",
-            "configuration": {
-              "endian": "little"
-            }
-          },
-          {
-            "name": "zstd",
-            "configuration": {
-              "level": 0,
-              "checksum": false
-            }
-          }
-        ],
-        "attributes": {
-          "long_name": "Meridional displacement between two consecutive observations",
-          "units": "meters",
-          "coordinates": "time",
-          "_FillValue": "AAAAAAAA+H8="
-        },
-        "dimension_names": [
-          "obs"
-        ],
-        "zarr_format": 3,
-        "node_type": "array",
-        "storage_transformers": []
-      },
-      "id": {
-        "shape": [
-          20
-        ],
-        "data_type": "int64",
-        "chunk_grid": {
-          "name": "regular",
-          "configuration": {
-            "chunk_shape": [
-              20
-            ]
-          }
-        },
-        "chunk_key_encoding": {
-          "name": "default",
-          "configuration": {
-            "separator": "/"
-          }
-        },
-        "fill_value": 0,
-        "codecs": [
-          {
-            "name": "bytes",
-            "configuration": {
-              "endian": "little"
-            }
-          },
-          {
-            "name": "zstd",
-            "configuration": {
-              "level": 0,
-              "checksum": false
-            }
-          }
-        ],
-        "attributes": {
-          "long_name": "Index of each trajectory"
         },
         "dimension_names": [
           "rows"
@@ -427,11 +239,11 @@
         "node_type": "array",
         "storage_transformers": []
       },
-      "dx": {
+      "time": {
         "shape": [
           24503
         ],
-        "data_type": "float64",
+        "data_type": "int64",
         "chunk_grid": {
           "name": "regular",
           "configuration": {
@@ -446,7 +258,7 @@
             "separator": "/"
           }
         },
-        "fill_value": 0.0,
+        "fill_value": 0,
         "codecs": [
           {
             "name": "bytes",
@@ -463,10 +275,9 @@
           }
         ],
         "attributes": {
-          "long_name": "Zonal displacement between two consecutive observations",
-          "units": "meters",
-          "coordinates": "time",
-          "_FillValue": "AAAAAAAA+H8="
+          "long_name": "Time of each observation",
+          "units": "seconds since 2025-05-12 12:51:31",
+          "calendar": "proleptic_gregorian"
         },
         "dimension_names": [
           "obs"
@@ -475,16 +286,16 @@
         "node_type": "array",
         "storage_transformers": []
       },
-      "v": {
+      "id": {
         "shape": [
-          24503
+          20
         ],
-        "data_type": "float64",
+        "data_type": "int64",
         "chunk_grid": {
           "name": "regular",
           "configuration": {
             "chunk_shape": [
-              24503
+              20
             ]
           }
         },
@@ -494,7 +305,7 @@
             "separator": "/"
           }
         },
-        "fill_value": 0.0,
+        "fill_value": 0,
         "codecs": [
           {
             "name": "bytes",
@@ -511,13 +322,10 @@
           }
         ],
         "attributes": {
-          "long_name": "Meridional velocity component between two consecutive observations",
-          "units": "meters per second",
-          "coordinates": "time",
-          "_FillValue": "AAAAAAAA+H8="
+          "long_name": "Index of each trajectory"
         },
         "dimension_names": [
-          "obs"
+          "rows"
         ],
         "zarr_format": 3,
         "node_type": "array",

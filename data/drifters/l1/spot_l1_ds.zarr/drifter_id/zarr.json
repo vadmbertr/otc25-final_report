@@ -1,13 +1,13 @@
 {
   "shape": [
-    837
+    189
   ],
   "data_type": "string",
   "chunk_grid": {
     "name": "regular",
     "configuration": {
       "chunk_shape": [
-        837
+        189
       ]
     }
   },
@@ -32,8 +32,7 @@
     }
   ],
   "attributes": {
-    "long_name": "Unique identifier of each drifter",
-    "coordinates": "id"
+    "long_name": "Unique identifier of each drifter"
   },
   "dimension_names": [
     "rows"

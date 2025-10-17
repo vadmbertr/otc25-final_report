@@ -1,13 +1,13 @@
 {
   "shape": [
-    23849
+    19846
   ],
   "data_type": "float64",
   "chunk_grid": {
     "name": "regular",
     "configuration": {
       "chunk_shape": [
-        23849
+        19846
       ]
     }
   },
@@ -34,7 +34,7 @@
     }
   ],
   "attributes": {
-    "long_name": "Time difference between two consecutive observations",
+    "long_name": "Time interval between successive observations",
     "units": "seconds",
     "coordinates": "time",
     "_FillValue": "AAAAAAAA+H8="

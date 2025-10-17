@@ -1,13 +1,13 @@
 {
   "shape": [
-    49
+    39
   ],
   "data_type": "int64",
   "chunk_grid": {
     "name": "regular",
     "configuration": {
       "chunk_shape": [
-        49
+        39
       ]
     }
   },
@@ -33,11 +33,9 @@
       }
     }
   ],
-  "attributes": {
-    "long_name": "Index of each trajectory"
-  },
+  "attributes": {},
   "dimension_names": [
-    "rows"
+    "id"
   ],
   "zarr_format": 3,
   "node_type": "array",
