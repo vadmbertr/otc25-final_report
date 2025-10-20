@@ -110,6 +110,23 @@ def create_mask_trajectories(traj_list: list, trajs_times: list, ts):
 
     return masks_time
 
+def create_mask_trajectories_optimized(traj_list: list, trajs_times: list, ts):
+    dt = np.timedelta64(15, "m")
+    masks_time = np.zeros((len(traj_list), len(ts)))
+    
+    for i in range(len(traj_list)):
+        traj_times = np.sort(trajs_times[i])  # Sort once
+        
+        for j in range(len(ts)):
+            # Binary search for range [ts[j] - dt, ts[j] + dt]
+            left = np.searchsorted(traj_times, ts[j] - dt, side='left')
+            right = np.searchsorted(traj_times, ts[j] + dt, side='right')
+            
+            if right > left:
+                masks_time[i, j] = 1
+    
+    return masks_time
+
 def temporal_interpolation(traj_list: list, masks_time, ts, trajs_times: list):
     """
     Takes a list of pastax trajectories and interpolates them in the times ts, taking into account that not all of them transmitted at those times

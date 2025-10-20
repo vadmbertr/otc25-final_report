@@ -1,0 +1,9 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "rows"
+    ],
+    "calendar": "proleptic_gregorian",
+    "coordinates": "id",
+    "long_name": "Deployment time of each drifter",
+    "units": "minutes since 2025-04-25 18:30:00"
+}

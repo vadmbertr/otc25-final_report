@@ -1,0 +1,234 @@
+{
+    "metadata": {
+        ".zattrs": {},
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "deploy_time/.zarray": {
+            "chunks": [
+                20
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                20
+            ],
+            "zarr_format": 2
+        },
+        "deploy_time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "rows"
+            ],
+            "calendar": "proleptic_gregorian",
+            "coordinates": "id",
+            "long_name": "Deployment time of each drifter",
+            "units": "minutes since 2025-05-12 12:00:00"
+        },
+        "drifter_id/.zarray": {
+            "chunks": [
+                20
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": null,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                20
+            ],
+            "zarr_format": 2
+        },
+        "drifter_id/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "rows"
+            ],
+            "coordinates": "id",
+            "long_name": "Unique identifier of each drifter"
+        },
+        "dt/.zarray": {
+            "chunks": [
+                24503
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                24503
+            ],
+            "zarr_format": 2
+        },
+        "dt/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "coordinates": "time",
+            "long_name": "Time interval between successive observations",
+            "units": "seconds"
+        },
+        "id/.zarray": {
+            "chunks": [
+                20
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                20
+            ],
+            "zarr_format": 2
+        },
+        "id/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "rows"
+            ],
+            "long_name": "Index of each trajectory"
+        },
+        "lat/.zarray": {
+            "chunks": [
+                24503
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                24503
+            ],
+            "zarr_format": 2
+        },
+        "lat/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "coordinates": "time",
+            "long_name": "Latitude",
+            "units": "degrees_north"
+        },
+        "lon/.zarray": {
+            "chunks": [
+                24503
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                24503
+            ],
+            "zarr_format": 2
+        },
+        "lon/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "coordinates": "time",
+            "long_name": "Longitude",
+            "units": "degrees_east"
+        },
+        "rowsize/.zarray": {
+            "chunks": [
+                20
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                20
+            ],
+            "zarr_format": 2
+        },
+        "rowsize/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "rows"
+            ],
+            "coordinates": "id",
+            "long_name": "Number of observations per trajectory"
+        },
+        "time/.zarray": {
+            "chunks": [
+                24503
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                24503
+            ],
+            "zarr_format": 2
+        },
+        "time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "calendar": "proleptic_gregorian",
+            "long_name": "Time of each observation",
+            "units": "seconds since 2025-05-12 12:51:31"
+        }
+    },
+    "zarr_consolidated_format": 1
+}

@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "obs"
+    ],
+    "coordinates": "time",
+    "long_name": "Meridional velocity component",
+    "units": "meters per second"
+}
