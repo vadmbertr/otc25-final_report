@@ -1,13 +1,13 @@
 {
   "shape": [
-    49
+    39
   ],
   "data_type": "int64",
   "chunk_grid": {
     "name": "regular",
     "configuration": {
       "chunk_shape": [
-        49
+        39
       ]
     }
   },
@@ -35,7 +35,6 @@
   ],
   "attributes": {
     "long_name": "Deployment time of each drifter",
-    "coordinates": "id",
     "units": "minutes since 2025-04-25 18:30:00",
     "calendar": "proleptic_gregorian"
   },

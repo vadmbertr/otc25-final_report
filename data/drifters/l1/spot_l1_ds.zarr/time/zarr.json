@@ -1,13 +1,13 @@
 {
   "shape": [
-    23849
+    19846
   ],
   "data_type": "int64",
   "chunk_grid": {
     "name": "regular",
     "configuration": {
       "chunk_shape": [
-        23849
+        19846
       ]
     }
   },
@@ -35,7 +35,7 @@
   ],
   "attributes": {
     "long_name": "Time of each observation",
-    "units": "seconds since 2025-05-12 18:19:36",
+    "units": "seconds since 2025-05-13 19:41:12",
     "calendar": "proleptic_gregorian"
   },
   "dimension_names": [

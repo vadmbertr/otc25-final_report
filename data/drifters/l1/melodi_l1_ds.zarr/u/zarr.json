@@ -1,13 +1,13 @@
 {
   "shape": [
-    46890
+    46837
   ],
   "data_type": "float64",
   "chunk_grid": {
     "name": "regular",
     "configuration": {
       "chunk_shape": [
-        23445
+        23419
       ]
     }
   },
@@ -34,7 +34,7 @@
     }
   ],
   "attributes": {
-    "long_name": "Zonal velocity component between two consecutive observations",
+    "long_name": "Zonal velocity component",
     "units": "meters per second",
     "coordinates": "time",
     "_FillValue": "AAAAAAAA+H8="

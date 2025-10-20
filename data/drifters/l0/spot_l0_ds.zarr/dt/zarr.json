@@ -34,7 +34,7 @@
     }
   ],
   "attributes": {
-    "long_name": "Time difference between two consecutive observations",
+    "long_name": "Time interval between successive observations",
     "units": "seconds",
     "coordinates": "time",
     "_FillValue": "AAAAAAAA+H8="
