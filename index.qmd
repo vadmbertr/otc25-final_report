@@ -18,5 +18,5 @@ bibliography: references.bib
 {{< include sections/01_introduction.qmd >}}
 {{< embed sections/02_methods.ipynb >}}
 {{< embed sections/03_results.ipynb >}}
-{{< include sections/04_discussion.qmd >}}
+{{< embed sections/04_discussion.ipynb >}}
 {{< include sections/05_conclusion.qmd >}}
