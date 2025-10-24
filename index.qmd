@@ -13,6 +13,7 @@ authors:
     corresponding: true
 number-sections: true
 bibliography: references.bib
+csl: https://www.zotero.org/styles/american-geophysical-union
 ---
 
 {{< include sections/01_introduction.qmd >}}
@@ -20,3 +21,5 @@ bibliography: references.bib
 {{< embed sections/03_results.ipynb >}}
 {{< embed sections/04_discussion.ipynb >}}
 {{< include sections/05_conclusion.qmd >}}
+{{< include sections/06_acknowledgements.qmd >}}
+
