@@ -1,0 +1,7 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "rows"
+    ],
+    "coordinates": "id",
+    "long_name": "Unique identifier of each drifter"
+}

@@ -14,6 +14,14 @@ format:
     code-fold: true
   pdf:
     link-citations: true
+    pdf-engine: xelatex
+    documentclass: article
+    geometry: margin=2.5cm
+    toc: true
+    number-sections: true
+    colorlinks: true
+    keep-tex: true
+
 
 execute:
   freeze: true

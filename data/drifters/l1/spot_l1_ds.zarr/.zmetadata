@@ -1,0 +1,286 @@
+{
+    "metadata": {
+        ".zattrs": {},
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "deploy_time/.zarray": {
+            "chunks": [
+                189
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                189
+            ],
+            "zarr_format": 2
+        },
+        "deploy_time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "rows"
+            ],
+            "calendar": "proleptic_gregorian",
+            "long_name": "Deployment time of each drifter",
+            "units": "minutes since 2025-05-12 12:00:00"
+        },
+        "drifter_id/.zarray": {
+            "chunks": [
+                189
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": null,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                189
+            ],
+            "zarr_format": 2
+        },
+        "drifter_id/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "rows"
+            ],
+            "long_name": "Unique identifier of each drifter"
+        },
+        "dt/.zarray": {
+            "chunks": [
+                19846
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                19846
+            ],
+            "zarr_format": 2
+        },
+        "dt/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "coordinates": "time",
+            "long_name": "Time interval between successive observations",
+            "units": "seconds"
+        },
+        "id/.zarray": {
+            "chunks": [
+                189
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                189
+            ],
+            "zarr_format": 2
+        },
+        "id/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "id"
+            ]
+        },
+        "lat/.zarray": {
+            "chunks": [
+                19846
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                19846
+            ],
+            "zarr_format": 2
+        },
+        "lat/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "coordinates": "time",
+            "long_name": "Latitude",
+            "units": "degrees_north"
+        },
+        "lon/.zarray": {
+            "chunks": [
+                19846
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                19846
+            ],
+            "zarr_format": 2
+        },
+        "lon/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "coordinates": "time",
+            "long_name": "Longitude",
+            "units": "degrees_east"
+        },
+        "rowsize/.zarray": {
+            "chunks": [
+                189
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                189
+            ],
+            "zarr_format": 2
+        },
+        "rowsize/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "rows"
+            ],
+            "long_name": "Number of observations per trajectory"
+        },
+        "time/.zarray": {
+            "chunks": [
+                19846
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                19846
+            ],
+            "zarr_format": 2
+        },
+        "time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "calendar": "proleptic_gregorian",
+            "long_name": "Time of each observation",
+            "units": "seconds since 2025-05-13 19:41:12"
+        },
+        "u/.zarray": {
+            "chunks": [
+                19846
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                19846
+            ],
+            "zarr_format": 2
+        },
+        "u/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "coordinates": "time",
+            "long_name": "Zonal velocity component",
+            "units": "meters per second"
+        },
+        "v/.zarray": {
+            "chunks": [
+                19846
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                19846
+            ],
+            "zarr_format": 2
+        },
+        "v/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "obs"
+            ],
+            "coordinates": "time",
+            "long_name": "Meridional velocity component",
+            "units": "meters per second"
+        }
+    },
+    "zarr_consolidated_format": 1
+}
