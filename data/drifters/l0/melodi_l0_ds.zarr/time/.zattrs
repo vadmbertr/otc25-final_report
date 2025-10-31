@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "obs"
+    ],
+    "calendar": "proleptic_gregorian",
+    "long_name": "Time of each observation",
+    "units": "minutes since 2025-04-25 19:05:00"
+}

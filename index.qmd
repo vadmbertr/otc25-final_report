@@ -1,20 +1,25 @@
 ---
-title: Modelling drifters trajectories and studying drifters ensembles dispersion during the Ocean Training Course 2025
+title: "**Modeling drifter trajectories and ensemble dispersion from the Ocean Training Course 2025**"
 authors:
   - name: Samantha Kucher
-    affiliation: MSC, Université Paris Cité
+    affiliations: 
+      - name: MSC, Université Paris Cité
     roles: writing
     corresponding: true
   - name: Vadim Bertrand
-    affiliation: IGE, Université Grenoble Alpes
+    affiliations: 
+      - name: IGE, Université Grenoble Alpes
     roles: writing
     corresponding: true
 number-sections: true
 bibliography: references.bib
+csl: https://www.zotero.org/styles/american-geophysical-union
 ---
 
 {{< include sections/01_introduction.qmd >}}
 {{< embed sections/02_methods.ipynb >}}
 {{< embed sections/03_results.ipynb >}}
-{{< include sections/04_discussion.qmd >}}
+{{< embed sections/04_discussion.ipynb >}}
 {{< include sections/05_conclusion.qmd >}}
+{{< include sections/06_acknowledgements.qmd >}}
+
