@@ -5,3 +5,5 @@ src/__pycache__
 index.fdb_latexmk
 /.quarto/
 **/*.quarto_ipynb
+site_libs
+data/*

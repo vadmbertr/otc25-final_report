@@ -22,6 +22,5 @@ format:
     colorlinks: true
     keep-tex: true
 
-
 execute:
   freeze: true
