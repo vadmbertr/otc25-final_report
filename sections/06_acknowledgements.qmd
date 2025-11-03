@@ -1,4 +1,4 @@
-# Acknowledgements
+# Acknowledgements {.unnumbered}
 
 ![](images/thanks.png)
 
