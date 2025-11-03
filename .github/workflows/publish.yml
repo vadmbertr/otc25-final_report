@@ -17,6 +17,11 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Install TinyTeX
+        run: |
+          quarto install tinytex
+          quarto check tinytex
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
