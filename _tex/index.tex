@@ -916,7 +916,7 @@ Section~\ref{sec-lin-comb-param-estimation}.
 As can be seen in Table~\ref{tbl-lin-mod-param-val}, the vertical eddy
 viscosity \(A_z\) estimated from the drifter data is
 \(0.027 \text{ m}^2\text{s}^{-1}\), which is within the expected range
-for open ocean conditions. Howerver, the windage coefficients are lower
+for open ocean conditions. However, the windage coefficients are lower
 than expected, with values of \(0.092 \text{ \%}\) and
 \(0.65 \text{ \%}\) for the SPOT and MELODI drifters respectively, while
 expected values are usually between \(1 \text{ \%}\) to
@@ -1249,6 +1249,31 @@ regime.}
 
 \section{Discussion}\label{sec-disc}
 
+\subsection{SPOT drifter design}\label{spot-drifter-design}
+
+The SPOT drifters were an experimental design developed for the OTC25
+campaign. They are highly cost-effective (approximately 300 € per unit,
+including one year of communication), easy to assemble, and capable of
+operating for several months at sea, even under rough conditions.
+
+The main limitation of the SPOT drifters was their erratic GPS sampling
+frequency, which led to significant data gaps. We believe this issue was
+primarily caused by the Globalstar satellite network, which (i) does not
+allow messages to be relayed from one satellite to another before being
+transmitted to ground stations, (ii) does not retry transmission after a
+communication error, and (iii) has limited coverage at high latitudes
+--one SPOT drifter notably began transmitting only sporadically after
+crossing 70° N, despite emitting regularly at lower latitudes.
+
+To improve the effective sampling frequency, future designs could
+consider increasing the nominal transmission rate---at the expense of
+battery life---or exploring alternative, albeit more expensive,
+satellite communication options. Another possible source of data gaps is
+the rotational motion observed around the drifters' vertical axis. As
+attempted during the voyage, attaching a drogue directly to the surface
+float should be considered to help reduce this motion in rough sea
+conditions.
+
 \subsection{Modeling of drifter
 trajectories}\label{modeling-of-drifter-trajectories-1}
 
@@ -1416,7 +1441,13 @@ established theoretical predictions and previous observational studies.
 This work is ongoing, and further analysis will be conducted once the
 remaining drifter trajectories are recovered.
 
-\section{Acknowledgements}\label{acknowledgements}
+On a more experimental note, we also finalized the assembly of 20
+homemade drifters on the ship's deck, and in order to improve the SPOT
+drifters stability we designed and implemented an active anchor made
+from repurposed sails and wire ropes.
+
+\section*{Acknowledgements}\label{acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
 
 \pandocbounded{\includegraphics[keepaspectratio]{images/thanks.png}}
 

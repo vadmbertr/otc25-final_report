@@ -175,8 +175,11 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#modeling-of-drifter-trajectories" id="toc-modeling-of-drifter-trajectories" class="nav-link active" data-scroll-target="#modeling-of-drifter-trajectories">Modeling of drifter trajectories</a></li>
+  <li><a href="#spot-drifter-design" id="toc-spot-drifter-design" class="nav-link active" data-scroll-target="#spot-drifter-design">SPOT drifter design</a></li>
+  <li><a href="#modeling-of-drifter-trajectories" id="toc-modeling-of-drifter-trajectories" class="nav-link" data-scroll-target="#modeling-of-drifter-trajectories">Modeling of drifter trajectories</a>
+  <ul class="collapse">
   <li><a href="#linear-combination" id="toc-linear-combination" class="nav-link" data-scroll-target="#linear-combination">Linear combination</a></li>
+  </ul></li>
   <li><a href="#maxey-riley-framework" id="toc-maxey-riley-framework" class="nav-link" data-scroll-target="#maxey-riley-framework">Maxey-Riley framework</a></li>
   <li><a href="#pair-dispersion" id="toc-pair-dispersion" class="nav-link" data-scroll-target="#pair-dispersion">Pair dispersion</a></li>
   </ul>
@@ -187,16 +190,22 @@
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
        <div id="bed2a4a2" class="cell markdown">
-<section id="modeling-of-drifter-trajectories" class="level2">
-<h2 class="anchored" data-anchor-id="modeling-of-drifter-trajectories">Modeling of drifter trajectories</h2>
+<section id="spot-drifter-design" class="level2">
+<h2 class="anchored" data-anchor-id="spot-drifter-design">SPOT drifter design</h2>
+<p>The SPOT drifters were an experimental design developed for the OTC25 campaign. They are highly cost-effective (approximately 300 € per unit, including one year of communication), easy to assemble, and capable of operating for several months at sea, even under rough conditions.</p>
+<p>The main limitation of the SPOT drifters was their erratic GPS sampling frequency, which led to significant data gaps. We believe this issue was primarily caused by the Globalstar satellite network, which (i) does not allow messages to be relayed from one satellite to another before being transmitted to ground stations, (ii) does not retry transmission after a communication error, and (iii) has limited coverage at high latitudes –one SPOT drifter notably began transmitting only sporadically after crossing 70° N, despite emitting regularly at lower latitudes.</p>
+<p>To improve the effective sampling frequency, future designs could consider increasing the nominal transmission rate—at the expense of battery life—or exploring alternative, albeit more expensive, satellite communication options. Another possible source of data gaps is the rotational motion observed around the drifters’ vertical axis. As attempted during the voyage, attaching a drogue directly to the surface float should be considered to help reduce this motion in rough sea conditions.</p>
 </section>
 </div>
 <div id="ec538622" class="cell markdown">
+<section id="modeling-of-drifter-trajectories" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-of-drifter-trajectories">Modeling of drifter trajectories</h2>
 <section id="linear-combination" class="level3">
 <h3 class="anchored" data-anchor-id="linear-combination">Linear combination</h3>
 <p>By nature the linear combination model has a limited expressive power as it assumes that the drifter velocity is a weighted sum of only four components: the cylogeostrophic current, the Ekman current, the Stokes drift, and the leeway. We choose to parameterize and calibrate some of this terms but from the drifter GPS data, but assessing their estimated values is not trivial. Some of the drifter deployments during the campaign were filmed using drones, which could be used to validate or better estimate some estimated parameters, especially the windage coefficients. Additional terms could also be added to the model in order to account for other processes affecting the drifter motion, such as inertial oscillations <span class="citation" data-cites="sykulskiLagrangianTimeSeries2016">[@sykulskiLagrangianTimeSeries2016]</span> or tidal currents.</p>
 <p>Drifter trajectories are not only affected by large-scale features, but also by small-scale eddies, fronts, or filaments, which are not yet resolved by satellite-derived current products. One way to account for these small-scale structures is to use stochastic representations of the drift and reconstruct ensembles of probable trajectories <span class="citation" data-cites="minguezStochasticLagrangianTrajectory2012 sykulskiLagrangianTimeSeries2016 brollyInferringOceanTransport2023">[@minguezStochasticLagrangianTrajectory2012; @sykulskiLagrangianTimeSeries2016; @brollyInferringOceanTransport2023]</span>. However, it is not clear how to calibrate such stochastic models, especially as the unresolved small-scale features are not homogeneous in space and time. Recent developments in machine learning could be leverage to learn a map from satellite observations capturing small-scale structures (such as sea surface temperature, ocean color, or surface roughness) to physical parameters (including in a stochastic setting) from drifter observations <span class="citation" data-cites="thoreyOnlineLearningContinuous2017 chengMachineLearningData2023">[@thoreyOnlineLearningContinuous2017; @chengMachineLearningData2023]</span>.</p>
 <p>We presented here only three drifter trajectory reconstructions, but a more comprehensive evaluation of the model performance could be conducted using all drifters deployed during the campaign, including the OMB and CLS drifters.</p>
+</section>
 </section>
 </div>
 <div id="be28e570" class="cell markdown">
