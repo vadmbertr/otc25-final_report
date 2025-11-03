@@ -1,0 +1,5 @@
+# Acknowledgements
+
+![](images/thanks.png)
+
+We want to thank ESA for giving us the opportunity to participate in the Ocean Training Course 2025. We thank Craig Donlon, Fabrice Collard and Johnny Johannessen for organizing the campaign. We thank Alexey Mironov for technical help with the drifters. We thank everyone that helped us deploy and follow the drifters. We thank the amazing group of people we had the honour to work and live with.

@@ -1,0 +1,20 @@
+# Introduction
+
+
+Better understanding of particle transport in the ocean is crucial to reduce marine plastic pollution. The life of microplastics in the ocean is nonetheless complex: they can be transported through long distances by currents and gyres, mixed in turbulent flows, broken into smaller pieces, and sinked by biofouling [@sutherland2023fluid].  Recent laboratory experiments and theoretical developments have been made to study the influence of particle size, shape and density [@clark2020settling], [@dibenedetto2022enhanced], [@calvert2024laboratory]. There is a growing interest in narrowing the gap between controlled experiments and real-world conditions found in the ocean. 
+
+Oceanic models are able to forecast the ocean state several days ahead, but they are not capable of resolving the small scales corresponding to particle transport. The combined effect of waves, currents and wind must be taken into account to predict the drift of passive tracers [@christensen2018short]. Parametrizing the movement of particles in wavy, turbulent flows thus presents a fundamental challenge [@van2020physical], [@sutherland2023fluid]. 
+
+It has been shown that large non-Lagrangian floating particles experience a drift larger than the Stokes drift [@calvert2021mechanism]. This is due to the object oscillation relative to the free surface and its submergence, which changes continuously with the wave slope. The size of the object with respect to the wavelength is a determining factor in the drifting velocity. In the ocean, the dynamics of currents strongly impacts the propagation of wave fields [@quilfen2019ocean], and therefore modifies the particles trajectories. The impact of wind has also been addressed, using a leeway modeling approach to gain physical understanding of the forces that play a role in the drift of floating objects [@wagner2022winds]. This model, however, does not accurately predict the trajectories of floating particles. Such prediction is given by the Maxey-Riley set for inertial surface particles [@maxey1983equation, @beron2019building].
+
+Satellite-tracked drifters have been studied in the North Atlantic [@elipot2016global], and an *in-situ* study has been made in the Florida Current [@olascoaga2020observation]. In the latter, the trajectory of buoys has been followed for one week. The authors successfully modeled the experimental data using a framework derived from the Maxey-Riley equations.
+
+This project aims to reconstruct the trajectory of drifters deployed during the expedition and to better understand how physical processes govern their motion. 
+We thus need to take into account the satellite measurements of sea surface deformation, wave induced currents and wind speed. 
+We employ a two folded approach: (i) in first approximation a linear combination of the surface currents, Stokes drift and direct wind-force, and (ii) the full equations describing the dynamics of floating intertial particles in the ocean: the Maxey-Riley set. 
+These two methods will allow us to decompose and analyze the individual forces governing the drifter's motion, providing deeper insights into the underlying dynamics.
+
+We focus here on deterministic modellings of the drift. 
+However, given the inherent chaotic nature of the problem and the uncertainties carried by our observations of oceanic and atmospheric variables, stochastic approaches might be relevant to simulate ensemble of probable and realistic trajectories, rather than one *incorrect* estimate. 
+One challenge is to control the dispersion of simulated ensembles to accurately cover the distribution of possible trajectories. 
+To address this question we study the relative dispersion over time of several ensembles of drifters deployed at the same space-time position.

@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.8.25">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+    <title>Results</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+      /* CSS for syntax highlighting */
+      html { -webkit-text-size-adjust: 100%; }
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+        }
+      pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+      div.sourceCode
+        {   }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+    </style>
+
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
+
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
+
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
+
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
+
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
+
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
+
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = "../index.html";
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
+<script src="../site_libs/manuscript-notebook/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a83c9a45aefaebd92e6600597b062590.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+     <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script> 
+      </head>
+
+  <body class="quarto-notebook quarto-light">
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> Results</h6>
+
+            <a href="../sections/03_results.ipynb" class="btn btn-primary quarto-download-embed" download="03_results.ipynb">Download Notebook</a>
+          </div>
+
+     <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Results</h1>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+        
+        <div class="quarto-title-meta">
+
+                
+          
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      </div>
+    </div>
+
+
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#modeling-of-drifter-trajectories" id="toc-modeling-of-drifter-trajectories" class="nav-link active" data-scroll-target="#modeling-of-drifter-trajectories">Modeling of drifter trajectories</a></li>
+  <li><a href="#linear-combination" id="toc-linear-combination" class="nav-link" data-scroll-target="#linear-combination">Linear combination</a></li>
+  <li><a href="#maxey-riley-framework" id="toc-maxey-riley-framework" class="nav-link" data-scroll-target="#maxey-riley-framework">Maxey-Riley framework</a></li>
+  <li><a href="#pair-dispersion" id="toc-pair-dispersion" class="nav-link" data-scroll-target="#pair-dispersion">Pair dispersion</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      
+
+       <div id="527b5cf9-3aa0-4dbc-ad8f-82ad0d7537bc" class="cell markdown">
+<p>In this section, we present the trajectory reconstruction performances of the drift models presented in <strong>?@sec-model-drif-traj</strong>, and the dispersion characteristics of the drifters ensembles in the different regions of deployment.</p>
+</div>
+<div id="809f5f5c" class="cell markdown">
+<section id="modeling-of-drifter-trajectories" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-of-drifter-trajectories">Modeling of drifter trajectories</h2>
+<p>Two models were used to reconstruct the drifter trajectories: a linear combination model (<strong>?@sec-linear-combination</strong>) and the Maxey-Riley framework (<strong>?@sec-mr-framework</strong>).</p>
+</section>
+</div>
+<div id="d2633163" class="cell markdown">
+<section id="linear-combination" class="level3">
+<h3 class="anchored" data-anchor-id="linear-combination">Linear combination</h3>
+<p>Before employing the linear combination model, we first estimated the parameters controlling the Ekman current magnitude (i.e.&nbsp;<span class="math inline">\(A_z\)</span>) and the windage coefficients (i.e.&nbsp;<span class="math inline">\(\beta_{w_S}\)</span> and <span class="math inline">\(\beta_{w_M}\)</span>) from the SPOT and MELODI drifter observations, as described in <strong>?@sec-lin-comb-param-estimation</strong>.</p>
+</section>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="5771ab04" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>sys.path.append(os.path.abspath(<span class="st">"../src"</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> least_square <span class="im">import</span> least_square_fit</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>base_dir <span class="op">=</span> <span class="st">"../data/drifters"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>l1_dir <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>base_dir<span class="sc">}</span><span class="ss">/l1"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>spot_l1_df <span class="op">=</span> pd.read_parquet(os.path.join(l1_dir, <span class="st">"spot_l1_df.parquet"</span>))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>melodi_l1_df <span class="op">=</span> pd.read_parquet(os.path.join(l1_dir, <span class="st">"melodi_l1_df.parquet"</span>))</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>drifter_l1_df, params <span class="op">=</span> least_square_fit(spot_l1_df, melodi_l1_df)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Az <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (params[<span class="dv">0</span>] <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>beta_ws <span class="op">=</span> params[<span class="dv">1</span>]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>beta_wm <span class="op">=</span> params[<span class="dv">2</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div></div>
+<div id="7fe96be3" class="cell markdown">
+<p>As can be seen in <a href="#tbl-lin-mod-param-val" class="quarto-xref">Table&nbsp;1</a>, the vertical eddy viscosity <span class="math inline">\(A_z\)</span> estimated from the drifter data is <span class="math inline">\(0.027 \text{ m}^2\text{s}^{-1}\)</span>, which is within the expected range for open ocean conditions. Howerver, the windage coefficients are lower than expected, with values of <span class="math inline">\(0.092 \text{ \%}\)</span> and <span class="math inline">\(0.65 \text{ \%}\)</span> for the SPOT and MELODI drifters respectively, while expected values are usually between <span class="math inline">\(1 \text{ \%}\)</span> to <span class="math inline">\(3 \text{ \%}\)</span>.</p>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [19]:</pre></div><div class="cell" data-execution_count="19">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Markdown(tabulate(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    [[Az, beta_ws <span class="op">*</span> <span class="dv">100</span>, beta_wm <span class="op">*</span> <span class="dv">100</span>]],</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>[<span class="st">"$A_z (</span><span class="ch">\\</span><span class="st">text</span><span class="sc">{m}</span><span class="st">^2 </span><span class="ch">\\</span><span class="st">text</span><span class="sc">{s}</span><span class="st">^{-1})$"</span>, <span class="st">"$</span><span class="ch">\\</span><span class="st">beta_</span><span class="sc">{w_S}</span><span class="st"> (</span><span class="er">\</span><span class="st">%)$"</span>, <span class="st">"$</span><span class="ch">\\</span><span class="st">beta_</span><span class="sc">{w_M}</span><span class="st"> (</span><span class="er">\</span><span class="st">%)$"</span>],</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    floatfmt<span class="op">=</span>(<span class="st">".3f"</span>, <span class="st">".3f"</span>, <span class="st">".2f"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-container"><div class="cell-decorator"><pre>In [19]:</pre></div><div id="tbl-lin-mod-param-val" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="19">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lin-mod-param-val-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Estimated parameters of the linear combination model (<strong>?@eq-lin-comb</strong>) after performing a non-negative-least-squares fit on the L1 processed drifter data.
+</figcaption>
+<div aria-describedby="tbl-lin-mod-param-val-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="19">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(A_z (\text{m}^2 \text{s}^{-1})\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\beta_{w_S} (\%)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\beta_{w_M} (\%)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.027</td>
+<td style="text-align: right;">0.092</td>
+<td style="text-align: right;">0.65</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div></div>
+</div></div>
+<div id="79f4893c" class="cell markdown">
+<p>Using the estimated parameters, we then reconstructed 7-days drifter trajectories as solutions to the ODE given by <strong>?@eq-lin-comb-ode</strong>. To keep this report short, we decided to focus on the MELODI drifters as they provide higher-frequency GPS data compared to the SPOT drifters. We selected three MELODI drifters released in different locations and under varying oceanic and atmospheric conditions:</p>
+<ul>
+<li>#301434060093370 deployed in the Lofoten Vortex on April 25, 2025, characterized by strong balanced currents and winds,</li>
+<li>#301434060982270 deployed off the coast of Portugal on May 24, 2025, under weak balanced currents and moderate winds,</li>
+<li>#301434060983290 deployed in the Balearic Sea on June 1, 2025, in a strong cyclonic stucture and almost no wind except for a brief blow from the East.</li>
+</ul>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [7]:</pre></div><div id="ae6341aa" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> jax</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>jax.config.update(<span class="st">"jax_enable_x64"</span>, <span class="va">True</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>sys.path.append(os.path.abspath(<span class="st">"../src"</span>))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> forcings <span class="im">import</span> get_forcings</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> linear_model <span class="im">import</span> LinearCombination</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> linear_reconstruction <span class="im">import</span> linear_reconstruction</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>base_dir <span class="op">=</span> <span class="st">"../data/drifters"</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>l2_dir <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>base_dir<span class="sc">}</span><span class="ss">/l2"</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>melodi_l2_df <span class="op">=</span> pd.read_parquet(os.path.join(l2_dir, <span class="st">"melodi_l2_df.parquet"</span>))</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Avoid re-fitting the model; hard-code previously estimated parameters</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>Az <span class="op">=</span> <span class="fl">0.027164294179297017</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>beta_wm <span class="op">=</span> <span class="fl">0.006456534645157547</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearCombination(Az<span class="op">=</span>Az, beta_w<span class="op">=</span>beta_wm)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>horizon_days <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>lof_true_traj, lof_est_traj <span class="op">=</span> linear_reconstruction(</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    model, melodi_l2_df, <span class="dv">0</span>, np.datetime64(<span class="st">"2025-04-25T20:00:00"</span>), horizon_days</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>na_true_traj, na_est_traj <span class="op">=</span> linear_reconstruction(</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    model, melodi_l2_df, <span class="dv">30</span>, np.datetime64(<span class="st">"2025-05-24T12:00:00"</span>), horizon_days</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>med_true_traj, med_est_traj <span class="op">=</span> linear_reconstruction(</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    model, melodi_l2_df, <span class="dv">35</span>, np.datetime64(<span class="st">"2025-06-01T22:00:00"</span>), horizon_days</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>vardyn_ds, wind_ds, wave_ds <span class="op">=</span> get_forcings()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div></div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [13]:</pre></div><div id="cell-fig-lin-comb-est" class="cell" data-execution_count="13">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.crs <span class="im">as</span> ccrs</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cmocean.cm <span class="im">as</span> cmo</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.lines <span class="im">import</span> Line2D</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_trajectories(true_traj, est_traj, ax):</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> aligned_range(min_val, max_val, spacing):</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        start <span class="op">=</span> np.ceil(min_val <span class="op">/</span> spacing) <span class="op">*</span> spacing</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        end   <span class="op">=</span> np.floor(max_val <span class="op">/</span> spacing) <span class="op">*</span> spacing</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.arange(start, end <span class="op">+</span> spacing <span class="op">/</span> <span class="dv">2</span>, spacing)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    points_idx <span class="op">=</span> ((np.arange(horizon_days) <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">24</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    ax.plot(</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        true_traj.value[<span class="dv">0</span>,<span class="dv">1</span>], true_traj.value[<span class="dv">0</span>,<span class="dv">0</span>], </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span><span class="st">"o"</span>, markersize<span class="op">=</span><span class="dv">4</span>, c<span class="op">=</span><span class="st">"mediumvioletred"</span>, linewidth<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    ax.plot(</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        est_traj.value[<span class="dv">0</span>,<span class="dv">1</span>], est_traj.value[<span class="dv">0</span>,<span class="dv">0</span>], <span class="st">'--'</span>, </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span><span class="st">"x"</span>, markersize<span class="op">=</span><span class="dv">4</span>, c<span class="op">=</span><span class="st">"mediumvioletred"</span>, linewidth<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    ax.plot(true_traj.value[:,<span class="dv">1</span>], true_traj.value[:,<span class="dv">0</span>], c<span class="op">=</span><span class="st">"mediumvioletred"</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    ax.plot(est_traj.value[:,<span class="dv">1</span>], est_traj.value[:,<span class="dv">0</span>], <span class="st">'--'</span>, c<span class="op">=</span><span class="st">"mediumvioletred"</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    min_lon, max_lon <span class="op">=</span> np.asarray(ax.get_xlim()) <span class="op">+</span> np.asarray([<span class="op">-</span><span class="fl">0.1</span>, <span class="fl">0.1</span>])</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    min_lat, max_lat <span class="op">=</span> np.asarray(ax.get_ylim()) <span class="op">+</span> np.asarray([<span class="op">-</span><span class="fl">0.1</span>, <span class="fl">0.1</span>])</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    mid_time <span class="op">=</span> np.datetime64(<span class="bu">int</span>(true_traj.times.value[<span class="bu">len</span>(true_traj.times.value) <span class="op">//</span> <span class="dv">2</span>].item()), <span class="st">"s"</span>)</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    _vardyn_ds <span class="op">=</span> vardyn_ds.sel(time<span class="op">=</span>mid_time, method<span class="op">=</span><span class="st">"nearest"</span>).sel(</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>        latitude<span class="op">=</span><span class="bu">slice</span>(min_lat, max_lat), longitude<span class="op">=</span><span class="bu">slice</span>(min_lon, max_lon)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    _wind_ds <span class="op">=</span> wind_ds.sel(time<span class="op">=</span>mid_time, method<span class="op">=</span><span class="st">"nearest"</span>).sel(</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        latitude<span class="op">=</span><span class="bu">slice</span>(min_lat, max_lat), longitude<span class="op">=</span><span class="bu">slice</span>(min_lon, max_lon)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    im <span class="op">=</span> ax.pcolormesh(</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>        _vardyn_ds.longitude, _vardyn_ds.latitude, np.sqrt(_vardyn_ds.ucos<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> _vardyn_ds.vcos<span class="op">**</span><span class="dv">2</span>),</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        cmap<span class="op">=</span>cmo.ice, vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="fl">.5</span>, shading<span class="op">=</span><span class="st">"auto"</span>, linewidth<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    ax.quiver(</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>        _wind_ds.longitude, _wind_ds.latitude, _wind_ds.eastward_wind, _wind_ds.northward_wind, scale<span class="op">=</span><span class="dv">400</span>, color<span class="op">=</span><span class="st">"gray"</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    num <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    ax.quiver(</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>        _vardyn_ds.longitude[::num], _vardyn_ds.latitude[::num], </span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>        _vardyn_ds.ucos[::num, ::num], _vardyn_ds.vcos[::num, ::num], </span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>        scale<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">"aliceblue"</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    ax.scatter(true_traj.value[points_idx,<span class="dv">1</span>], true_traj.value[points_idx,<span class="dv">0</span>], marker<span class="op">=</span><span class="st">"o"</span>, s<span class="op">=</span><span class="dv">16</span>, c<span class="op">=</span><span class="st">"mediumvioletred"</span>)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    ax.scatter(est_traj.value[points_idx,<span class="dv">1</span>], est_traj.value[points_idx,<span class="dv">0</span>], marker<span class="op">=</span><span class="st">"x"</span>, s<span class="op">=</span><span class="dv">16</span>, c<span class="op">=</span><span class="st">"mediumvioletred"</span>)</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>    lon_ticks <span class="op">=</span> aligned_range(min_lon, max_lon, spacing<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>    lat_ticks <span class="op">=</span> aligned_range(min_lat, max_lat, spacing<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    gl <span class="op">=</span> ax.gridlines(</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>        draw_labels<span class="op">=</span><span class="va">True</span>, xlocs<span class="op">=</span>lon_ticks, ylocs<span class="op">=</span>lat_ticks, linewidth<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"gray"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, linestyle<span class="op">=</span><span class="st">"--"</span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> im, gl</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>fig, axd <span class="op">=</span> plt.subplot_mosaic(</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a><span class="st">    BA</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="st">    BC</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span>,</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>    width_ratios<span class="op">=</span>[<span class="fl">.4</span>, <span class="fl">.6</span>],</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>    subplot_kw<span class="op">=</span><span class="bu">dict</span>(projection<span class="op">=</span>ccrs.PlateCarree()),</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>    <span class="co">#gridspec_kw=get_gridspec_kwargs(fig_width, fig_height),</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>    figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">5</span>), layout<span class="op">=</span><span class="st">"compressed"</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>_, gl_b <span class="op">=</span> plot_trajectories(na_true_traj, na_est_traj, axd[<span class="st">"B"</span>])</span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>_, gl_a <span class="op">=</span> plot_trajectories(lof_true_traj, lof_est_traj, axd[<span class="st">"A"</span>])</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>im, gl_c <span class="op">=</span> plot_trajectories(med_true_traj, med_est_traj, axd[<span class="st">"C"</span>])</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>gl_b.top_labels <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>gl_b.right_labels <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>gl_a.bottom_labels <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>gl_a.left_labels <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>gl_c.top_labels <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>gl_c.left_labels <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>clb <span class="op">=</span> fig.colorbar(</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>    im, ax<span class="op">=</span>axd.values(), location<span class="op">=</span><span class="st">"bottom"</span>, shrink<span class="op">=</span><span class="fl">.66</span>, extend<span class="op">=</span><span class="st">"max"</span></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>clb.set_label(label<span class="op">=</span><span class="st">"$</span><span class="er">\</span><span class="st">| u_</span><span class="sc">{cg}</span><span class="st"> </span><span class="er">\</span><span class="st">|$ (m s$^{-1}$)"</span>)</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>line_handles <span class="op">=</span> [</span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>    Line2D([], [], color<span class="op">=</span><span class="st">"mediumvioletred"</span>, marker<span class="op">=</span><span class="st">"o"</span>, lw<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="st">"Reference"</span>),</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>    Line2D([], [], color<span class="op">=</span><span class="st">"mediumvioletred"</span>, marker<span class="op">=</span><span class="st">"x"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, lw<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="st">"Simulated"</span>),</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>leg1 <span class="op">=</span> fig.legend(</span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>    handles<span class="op">=</span>line_handles, loc<span class="op">=</span><span class="st">"upper center"</span>, ncol<span class="op">=</span><span class="dv">2</span>, frameon<span class="op">=</span><span class="va">True</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">0.975</span>)</span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>fig.add_artist(leg1)</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-lin-comb-est" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lin-comb-est-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
+<a href="03_results_files/figure-html/fig-lin-comb-est-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Linear combination model (?@eq-lin-comb) estimated trajectories over a 7-day horizon (dashed lines) against the true drifter trajectories (solid lines) for three different MELODI drifters deployed in the Lofoten Vortex (top right), off the Portuguese Coast (left), and in the Balearic Sea (bottom right). Markers indicate daily positions along the trajectories. Background colors indicate the magnitude of the cyclogeostrophic current from the VarDyn and white arrows give their velocity, while grey arrows represent wind velocity from the ERA5 reanalysis."><img src="03_results_files/figure-html/fig-lin-comb-est-output-1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lin-comb-est-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Linear combination model (<strong>?@eq-lin-comb</strong>) estimated trajectories over a 7-day horizon (dashed lines) against the true drifter trajectories (solid lines) for three different MELODI drifters deployed in the Lofoten Vortex (top right), off the Portuguese Coast (left), and in the Balearic Sea (bottom right). Markers indicate daily positions along the trajectories. Background colors indicate the magnitude of the cyclogeostrophic current from the VarDyn and white arrows give their velocity, while grey arrows represent wind velocity from the ERA5 reanalysis.
+</figcaption>
+</figure>
+</div>
+</div>
+</div></div>
+<div id="2cd5c395" class="cell markdown">
+<p>The reconstructed trajectories (dashed lines) are shown in <a href="#fig-lin-comb-est" class="quarto-xref">Figure&nbsp;1</a> against the true drifter trajectories (solid lines) over a 7-day horizon. Markers indicate daily positions along the trajectories. Background colors indicate the magnitude of the cyclogeostrophic current from the VarDyn and white arrows give their velocity, while grey arrows represent wind velocity from the ERA5 reanalysis. The geophysical fields are represented at for the center timestamp of each trajectory. Metrics quantifying the reconstruction performance, namely the final separation distance and the Liu index, are reported in <a href="#tbl-lin-mod-eval" class="quarto-xref">Table&nbsp;2</a>.</p>
+<p>It can be seen that the reconstructed trajectory in the Lofoten Vortex (top right panel of <a href="#fig-lin-comb-est" class="quarto-xref">Figure&nbsp;1</a>) closely follows the true drifter trajectory but at a much slower pace. It suggests that the cyclogeostrophic currents are well captured by the VarDyn product, but that the Ekman current (usually the second largest term in a linear combination drift model) might be underestimated. Because of the strong winds and currents, another possible explaination for this discrepancy could be an inacurrate representation of the wind-current interactions. This results in a final separation distance of approximately 29 km after 7 days, and a Liu Index of 0.23, indicating that the estimation separates four times more slowly than the drifter moves.</p>
+<p>The trajectory reconstructed off the Portuguese coast (left panel of <a href="#fig-lin-comb-est" class="quarto-xref">Figure&nbsp;1</a>) shows a larger deviation from the true drifter trajectory, with a final separation distance of approximately 76 km and a Liu index of 0.32. By looking at <a href="#fig-lin-comb-est" class="quarto-xref">Figure&nbsp;1</a>, it appears that the drifter followed a small-scale structure heading South-South-East and not captured by satellite-derived observations products, while the reconstruction follows a current oriented slightly more to the West.</p>
+<p>Finally, the trajectory reconstructed in the Balearic Sea (bottom right panel of <a href="#fig-lin-comb-est" class="quarto-xref">Figure&nbsp;1</a>) shows an averall very good agreement with the true drifter trajectory, with a final separation distance of approximately 35 km but more importantly a Liu index of 0.1, meaning that the distance between the estimation and the reference grows ten times slowly than the drifter displaces. The westward gust of wind is clearly visible in the reference trajectory because of the inertial oscillations it generates, a process that is not represented at all in the linear combination drift model.</p>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [14]:</pre></div><div class="cell" data-execution_count="14">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Markdown(tabulate(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Lofoten Vortex"</span>, </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>            lof_true_traj.separation_distance(lof_est_traj).value[<span class="op">-</span><span class="dv">1</span>] <span class="op">/</span> <span class="fl">1e3</span>, </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>            lof_true_traj.liu_index(lof_est_traj).value[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        ], </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Portuguese Coast"</span>, </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>            na_true_traj.separation_distance(na_est_traj).value[<span class="op">-</span><span class="dv">1</span>] <span class="op">/</span> <span class="fl">1e3</span>, </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>            na_true_traj.liu_index(na_est_traj).value[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        ], </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Balearic Sea"</span>, </span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>            med_true_traj.separation_distance(med_est_traj).value[<span class="op">-</span><span class="dv">1</span>] <span class="op">/</span> <span class="fl">1e3</span>, </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>            med_true_traj.liu_index(med_est_traj).value[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>[<span class="st">"Region"</span>, <span class="st">"Separation distance (km)"</span>, <span class="st">"Liu Index"</span>],</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    floatfmt<span class="op">=</span>(<span class="st">"g"</span>, <span class="st">".0f"</span>, <span class="st">".2f"</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-container"><div class="cell-decorator"><pre>In [14]:</pre></div><div id="tbl-lin-mod-eval" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="14">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lin-mod-eval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Performances of the linear combination model (<strong>?@eq-lin-comb</strong>) in three distinct regions and conditions.
+</figcaption>
+<div aria-describedby="tbl-lin-mod-eval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="14">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Region</th>
+<th style="text-align: right;">Separation distance (km)</th>
+<th style="text-align: right;">Liu Index</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Lofoten Vortex</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">0.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Portuguese Coast</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">0.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Balearic Sea</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">0.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div></div>
+</div></div>
+<div id="3d63ac12" class="cell markdown">
+<section id="maxey-riley-framework" class="level3">
+<h3 class="anchored" data-anchor-id="maxey-riley-framework">Maxey-Riley framework</h3>
+</section>
+</div>
+<div id="b13f0d81" class="cell markdown">
+<p>We will use the data from MELODI drifters since they provide a better time resolution that the SPOT drifters (they transmit in regular intervals). As shown in <strong>?@fig-melodi-design</strong>, they are not spherical. To take their shape into account, we calculate the radius of the sphere with equivalent projected area, surface area and equivalent volume (<strong>?@eq-K-melodi</strong>), obtaining <span class="math inline">\(a_n\)</span> = 0.08 m, <span class="math inline">\(a_s\)</span> = 0.12 m and <span class="math inline">\(a_v\)</span> = 0.11 m. The weight on the bottom of the drifters is not taken into account for this calculations but the total weight of the drifter is considered to calculate its density. We use a combination of all the currents present at the surface to compute <span class="math inline">\(v_f\)</span> (Ekman, Stokes and the cyclogesotrophic currents) and the wind at the surface to compute <span class="math inline">\(v_a\)</span>.</p>
+<p>We consider three representative cases: a deployment in the Norwegian Sea, one in the Atlantic Ocean and one in the Mediterranean Sea. <a href="#fig-MR-lofoten" class="quarto-xref">Figure&nbsp;2</a> shows the drifter real trajectory for a week after release in the Lofoten Vortex on the 24th April and the reconstructed trajectory from the Maxey-Riley framework, obtained using <strong>?@eq-MR</strong>. We can observe that the reconstructed trajectory follows the general tendency of the real one but it does not exactly follow the same path, and seems to move with a slower speed than the real drifter. It is worth noting that the drifter seems to be highly influenced by the wind (blowing northward).</p>
+<p><a href="#fig-MR-atlantic" class="quarto-xref">Figure&nbsp;3</a> shows the real and simulated trajectories for a deployment made in the Atlantic Ocean on the 23rd May. Remarkably, in this case the simulated trajectory is really close to the real one. Nevertheless, it does not seem to take into account the small scale oscillations visible in the real trajectory. These oscillations are usually generated by waves and are not visible in the sattelite data, which could explain why the simulation did not account for them.</p>
+<p>It is important to remind that these numerical resolutions do not have any fitting parameter. They only depend on the currents and wind fields (products derived from sattelite data), the initial position of the drifter and its geometry. The numerical resolution is thus very sensitive to changes in those parameters. For example, several runs of the simulation with slight changes of the initial position give rise to a different outcome, which may not be close to the real one. <a href="#fig-MR-mediterranean" class="quarto-xref">Figure&nbsp;4</a> shows the real and simulated trajectories for a deployment made in the Mediterranean Sea on the 30th May. In this case, the deployment was made at the interface between two vortices and the wind was blowing westward. The simulated trajectory does not follow the real one. We will discuss the possible reasons in the <strong>?@sec-disc</strong>.</p>
+</div>
+<div id="5e7d37c8" class="cell markdown">
+<div id="fig-MR-lofoten" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-MR-lofoten-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/MR_Lofoten.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Drifter trajectory on the Lofoten Vortex during one week after deployment. The solid lines indicate the real trajectory, while the dashed lines show the result of solving the Maxey-Riley set. The colors indicate the absolute value of the cyclogeostrophic current at the moment of release. The white arrows show the direction of the current and the gray arrows indicate the wind direction."><img src="images/MR_Lofoten.png" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-MR-lofoten-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Drifter trajectory on the Lofoten Vortex during one week after deployment. The solid lines indicate the real trajectory, while the dashed lines show the result of solving the Maxey-Riley set. The colors indicate the absolute value of the cyclogeostrophic current at the moment of release. The white arrows show the direction of the current and the gray arrows indicate the wind direction.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="9233e3bf" class="cell markdown">
+<div id="fig-MR-atlantic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-MR-atlantic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/MR_Atlantic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Drifter trajectory in the Atlantic Ocean, near the Portuguese coast, during one week after deployment. The solid lines indicate the real trajectory, while the dashed lines show the result of solving the Maxey-Riley set. The colors indicate the absolute value of the cyclogeostrophic current at the moment of release. The white arrows show the direction of the current and the gray arrows indicate the wind direction."><img src="images/MR_Atlantic.png" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-MR-atlantic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Drifter trajectory in the Atlantic Ocean, near the Portuguese coast, during one week after deployment. The solid lines indicate the real trajectory, while the dashed lines show the result of solving the Maxey-Riley set. The colors indicate the absolute value of the cyclogeostrophic current at the moment of release. The white arrows show the direction of the current and the gray arrows indicate the wind direction.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="3e81ad30" class="cell markdown">
+<div id="fig-MR-mediterranean" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-MR-mediterranean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/MR_mediterranean.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Drifter trajectory on the Mediterranean Sea during one week after deployment. The solid lines indicate the real trajectory, while the dashed lines show the result of solving the Maxey-Riley set. The colors indicate the absolute value of the cyclogeostrophic current at the moment of release. The white arrows show the direction of the current and the gray arrows indicate the wind direction."><img src="images/MR_mediterranean.png" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-MR-mediterranean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Drifter trajectory on the Mediterranean Sea during one week after deployment. The solid lines indicate the real trajectory, while the dashed lines show the result of solving the Maxey-Riley set. The colors indicate the absolute value of the cyclogeostrophic current at the moment of release. The white arrows show the direction of the current and the gray arrows indicate the wind direction.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="57de893f" class="cell markdown">
+<section id="pair-dispersion" class="level2">
+<h2 class="anchored" data-anchor-id="pair-dispersion">Pair dispersion</h2>
+</section>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [15]:</pre></div><div id="5b84fc82" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>scripts_path <span class="op">=</span> os.path.join(os.path.dirname(os.getcwd()), <span class="st">'scripts'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>sys.path.append(scripts_path)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functions_pair_dispersion <span class="im">import</span> get_trajectory, create_trajectories_and_times_list, create_mask_trajectories_optimized, temporal_interpolation, distance_pair, K_pair, apply_mask_KD, calculate_pair_separation_pair_diffusivity_and_mask_pair</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> date</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.lines <span class="im">import</span> Line2D</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cmocean.cm <span class="im">as</span> cmo</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> jax</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> jax.numpy <span class="im">as</span> jnp</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> jaxtyping <span class="im">import</span> Array, Float, Int, Real</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pastax.trajectory <span class="im">import</span> Trajectory</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div></div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [16]:</pre></div><div id="b915ef22" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure styling</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> rc</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>rc(<span class="st">'lines'</span>,  markersize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>rc(<span class="st">"legend"</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>rc(<span class="st">"axes"</span>, labelsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>rc(<span class="st">"xtick"</span>, labelsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>rc(<span class="st">"ytick"</span>, labelsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>rc(<span class="st">"lines"</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> [<span class="st">'serif'</span>]</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">'font.serif'</span>] <span class="op">=</span> [<span class="st">'Times New Roman'</span>]<span class="op">+</span> mpl.rcParams[<span class="st">'font.serif'</span>]</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">"mathtext.fontset"</span>] <span class="op">=</span> <span class="st">"stix"</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">#mpl.rcParams['text.usetex'] = True</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>cmap <span class="op">=</span> plt.colormaps[<span class="st">"ocean"</span>]</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>cmap <span class="op">=</span> cmo.speed</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div></div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [17]:</pre></div><div id="e3f19f6b" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>jax.config.update(<span class="st">"jax_enable_x64"</span>, <span class="va">True</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>jax.config.update(<span class="st">"jax_disable_jit"</span>, <span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div></div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [18]:</pre></div><div id="19845bb9" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>base_dir <span class="op">=</span> <span class="st">"../data/drifters"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>l2_dir <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>base_dir<span class="sc">}</span><span class="ss">/l2"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>spot_l2_df <span class="op">=</span> pd.read_parquet(os.path.join(l2_dir, <span class="st">"spot_l2_df.parquet"</span>))</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>spot_l2_df[<span class="st">'deploy_date'</span>] <span class="op">=</span> pd.to_datetime(spot_l2_df[<span class="st">'deploy_time'</span>]).dt.date</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>date_deployment_1 <span class="op">=</span> date(<span class="dv">2025</span>, <span class="dv">5</span>, <span class="dv">12</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>date_deployment_2 <span class="op">=</span> date(<span class="dv">2025</span>, <span class="dv">5</span>, <span class="dv">18</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>date_deployment_3 <span class="op">=</span> date(<span class="dv">2025</span>, <span class="dv">5</span>, <span class="dv">24</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>date_deployment_4 <span class="op">=</span> date(<span class="dv">2025</span>, <span class="dv">5</span>, <span class="dv">30</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>drifters_deployment_1 <span class="op">=</span> spot_l2_df[spot_l2_df[<span class="st">'deploy_date'</span>] <span class="op">==</span> date_deployment_1][<span class="st">'drifter_id'</span>].unique()</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>drifters_deployment_2 <span class="op">=</span> spot_l2_df[spot_l2_df[<span class="st">'deploy_date'</span>] <span class="op">==</span> date_deployment_2][<span class="st">'drifter_id'</span>].unique()</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>drifters_deployment_3 <span class="op">=</span> spot_l2_df[spot_l2_df[<span class="st">'deploy_date'</span>] <span class="op">==</span> date_deployment_3][<span class="st">'drifter_id'</span>].unique()</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>drifters_deployment_4 <span class="op">=</span> spot_l2_df[spot_l2_df[<span class="st">'deploy_date'</span>] <span class="op">==</span> date_deployment_4][<span class="st">'drifter_id'</span>].unique()</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_trajectories_and_times_list(drifters_id, spot_l2_df):</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    traj_list <span class="op">=</span> []</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(drifters_id)):</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        drifter_id <span class="op">=</span> drifters_id[i]</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        df <span class="op">=</span> spot_l2_df[spot_l2_df[<span class="st">"drifter_id"</span>] <span class="op">==</span> drifter_id]</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        traj <span class="op">=</span> Trajectory.from_array(</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>            jnp.stack((jnp.asarray(df[<span class="st">'lat'</span>]), jnp.asarray(df[<span class="st">'lon'</span>])), axis<span class="op">=-</span><span class="dv">1</span>), </span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>            jnp.asarray(np.asarray(df[<span class="st">'time'</span>]).astype(<span class="st">"datetime64[s]"</span>).astype(<span class="bu">int</span>)))</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        traj_list.append(traj)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    traj_times <span class="op">=</span> []</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> traj <span class="kw">in</span> traj_list:</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        traj_times.append(np.asarray(traj.times.value).astype(<span class="st">"datetime64[s]"</span>))</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> traj_list, traj_times</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>traj_list_1, traj_times_1 <span class="op">=</span> create_trajectories_and_times_list(drifters_deployment_1, spot_l2_df)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>traj_list_2, traj_times_2 <span class="op">=</span> create_trajectories_and_times_list(drifters_deployment_2, spot_l2_df)</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>traj_list_3, traj_times_3 <span class="op">=</span> create_trajectories_and_times_list(drifters_deployment_3, spot_l2_df)</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>traj_list_4, traj_times_4 <span class="op">=</span> create_trajectories_and_times_list(drifters_deployment_4, spot_l2_df)</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="dv">30</span><span class="op">*</span><span class="dv">60</span> <span class="co"># in seconds</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>ts_1 <span class="op">=</span> np.arange(date_deployment_1, np.datetime64(<span class="st">'now'</span>), np.timedelta64(<span class="dv">30</span>,<span class="st">'m'</span>))</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>ts_2 <span class="op">=</span> np.arange(date_deployment_2, np.datetime64(<span class="st">'now'</span>), np.timedelta64(<span class="dv">30</span>,<span class="st">'m'</span>))</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>ts_3 <span class="op">=</span> np.arange(date_deployment_3, np.datetime64(<span class="st">'now'</span>), np.timedelta64(<span class="dv">30</span>,<span class="st">'m'</span>))</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>ts_4 <span class="op">=</span> np.arange(date_deployment_4, np.datetime64(<span class="st">'now'</span>), np.timedelta64(<span class="dv">30</span>,<span class="st">'m'</span>))</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>masks_time_1 <span class="op">=</span> create_mask_trajectories_optimized(traj_list_1, traj_times_1, ts_1)</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>masks_time_2 <span class="op">=</span> create_mask_trajectories_optimized(traj_list_2, traj_times_2, ts_2)</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>masks_time_3 <span class="op">=</span> create_mask_trajectories_optimized(traj_list_3, traj_times_3, ts_3)</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>masks_time_4 <span class="op">=</span> create_mask_trajectories_optimized(traj_list_4, traj_times_4, ts_4)</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>interpolated_trajs_1 <span class="op">=</span> temporal_interpolation(traj_list_1, masks_time_1, ts_1, traj_times_1)</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>interpolated_trajs_2 <span class="op">=</span> temporal_interpolation(traj_list_2, masks_time_2, ts_2, traj_times_2)</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>interpolated_trajs_3 <span class="op">=</span> temporal_interpolation(traj_list_3, masks_time_3, ts_3, traj_times_3)</span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>interpolated_trajs_4 <span class="op">=</span> temporal_interpolation(traj_list_4, masks_time_4, ts_4, traj_times_4)</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>Ds_1, Ks_1, mask_pair_1 <span class="op">=</span> calculate_pair_separation_pair_diffusivity_and_mask_pair(interpolated_trajs_1, masks_time_1, dt)</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>Ds_2, Ks_2, mask_pair_2 <span class="op">=</span> calculate_pair_separation_pair_diffusivity_and_mask_pair(interpolated_trajs_2, masks_time_2, dt)</span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>Ds_3, Ks_3, mask_pair_3 <span class="op">=</span> calculate_pair_separation_pair_diffusivity_and_mask_pair(interpolated_trajs_3, masks_time_3, dt)</span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>Ds_4, Ks_4, mask_pair_4 <span class="op">=</span> calculate_pair_separation_pair_diffusivity_and_mask_pair(interpolated_trajs_4, masks_time_4, dt)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div></div>
+<div id="61b190f0" class="cell markdown">
+<p>We used the home-made SPOT drifters to study pair dispersion. They are designed to transmit their position every 30 minutes. However, this is not always the case. In order to calculate the distance betwen a pair of drifters, they should have transmitted in the same time interval. <a href="#fig-pair-masks" class="quarto-xref">Figure&nbsp;5</a> shows in black when each drifter transmitted its position, using a time interval of 30 minutes. This trajectories have already been interpolated in time (L2 version). For each deployment of <span class="math inline">\(N=5\)</span> drifters, there are <span class="math inline">\(N(N-1)/2 = 10\)</span> pairs. For each pair, we will consider their positions if they transmitted at the same time interval.</p>
+<p>Considering the variability of the conditions for making <em>in-situ</em> measurements, each group of drifters behave differently. We can observe that there are several pairs for the first and third depoyments, but less simultaneous transmissions for the second and fourth. For example, on the last deployment one drifter stop transmitting almost inmediately, so we have only 6 pairs. But if we take a closer look at <a href="#fig-pair-masks" class="quarto-xref">Figure&nbsp;5</a> (d) we see that in practice we have only one pair of drifters that transmitted for more than a month.</p>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [20]:</pre></div><div id="cell-fig-pair-masks" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">2</span>, sharex <span class="op">=</span> <span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>, figsize <span class="op">=</span> (<span class="dv">18</span>,<span class="dv">10</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].imshow(masks_time_1, aspect<span class="op">=</span><span class="st">'auto'</span>, interpolation<span class="op">=</span><span class="st">'none'</span>, cmap<span class="op">=</span>cmo.speed, extent <span class="op">=</span> (<span class="dv">0</span>,masks_time_1.shape[<span class="dv">1</span>]<span class="op">*</span><span class="dv">30</span><span class="op">/</span><span class="dv">1440</span>, <span class="fl">0.50</span>, masks_time_1.shape[<span class="dv">0</span>] <span class="op">+</span> <span class="fl">0.5</span>))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].imshow(masks_time_2, aspect<span class="op">=</span><span class="st">'auto'</span>, interpolation<span class="op">=</span><span class="st">'none'</span>, cmap<span class="op">=</span>cmo.speed, extent <span class="op">=</span> (<span class="dv">0</span>,masks_time_2.shape[<span class="dv">1</span>]<span class="op">*</span><span class="dv">30</span><span class="op">/</span><span class="dv">1440</span>, <span class="fl">0.50</span>, masks_time_2.shape[<span class="dv">0</span>] <span class="op">+</span> <span class="fl">0.5</span>))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].imshow(masks_time_3, aspect<span class="op">=</span><span class="st">'auto'</span>, interpolation<span class="op">=</span><span class="st">'none'</span>, cmap<span class="op">=</span>cmo.speed, extent <span class="op">=</span> (<span class="dv">0</span>,masks_time_3.shape[<span class="dv">1</span>]<span class="op">*</span><span class="dv">30</span><span class="op">/</span><span class="dv">1440</span>, <span class="fl">0.50</span>, masks_time_3.shape[<span class="dv">0</span>] <span class="op">+</span> <span class="fl">0.5</span>))</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">1</span>].imshow(masks_time_4, aspect<span class="op">=</span><span class="st">'auto'</span>, interpolation<span class="op">=</span><span class="st">'none'</span>, cmap<span class="op">=</span>cmo.speed, extent <span class="op">=</span> (<span class="dv">0</span>,masks_time_4.shape[<span class="dv">1</span>]<span class="op">*</span><span class="dv">30</span><span class="op">/</span><span class="dv">1440</span>, <span class="fl">0.50</span>, masks_time_4.shape[<span class="dv">0</span>] <span class="op">+</span> <span class="fl">0.5</span>))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].set_title(<span class="st">'(a) Deployment 1'</span>, fontsize <span class="op">=</span> <span class="dv">20</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].set_title(<span class="st">'(b) Deployment 2'</span>, fontsize <span class="op">=</span> <span class="dv">20</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].set_title(<span class="st">'(c) Deployment 3'</span>, fontsize <span class="op">=</span> <span class="dv">20</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">1</span>].set_title(<span class="st">'(d) Deployment 4'</span>, fontsize <span class="op">=</span> <span class="dv">20</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].set_ylabel(<span class="st">'N° of drifter'</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].set_ylabel(<span class="st">'N° of drifter'</span>)</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].set_ylim(<span class="fl">0.5</span>, masks_time_1.shape[<span class="dv">0</span>] <span class="op">+</span> <span class="fl">0.5</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].set_xlabel(<span class="st">'time since release [days]'</span>)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">1</span>].set_xlabel(<span class="st">'time since release [days]'</span>)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-pair-masks" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pair-masks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
+<a href="03_results_files/figure-html/fig-pair-masks-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Mask showing if the drifters transmitted their position. The black rectangles indicate that the transmission was successful, yellow rectangles indicate that they did not transmit. L2 trajectories are used for the analysis."><img src="03_results_files/figure-html/fig-pair-masks-output-1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pair-masks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Mask showing if the drifters transmitted their position. The black rectangles indicate that the transmission was successful, yellow rectangles indicate that they did not transmit. L2 trajectories are used for the analysis.
+</figcaption>
+</figure>
+</div>
+</div>
+</div></div>
+<div id="ad89d00e" class="cell markdown">
+<p><a href="#fig-pair-dispersion" class="quarto-xref">Figure&nbsp;6</a> shows the pair dispersion <span class="math inline">\(D^2\)</span> as a function of time for each deployment. As discussed before, for the first and third deployments we have several pairs while we do not have enough data for the second and fourth. In <a href="#fig-pair-dispersion" class="quarto-xref">Figure&nbsp;6</a> (a) we can clearly observe two different behaviors: an exponential growth for the first two weeks after release, and a different regime after. Pink lines indicate the exponential and the Richardson regimes, showing a good agreement with the measured data. The third deployment, however, seems to show only an exponential behavior. It follows a scaling law <span class="math inline">\(D^2 \propto e^{ \alpha t}\)</span>, with a growth rate of <span class="math inline">\(\alpha = 5\)</span>. Unexpectedly, this growth rate is bigger than the one of the first deployment but the particles remain in an exponential regime. This can be due to a difference in transition thresholds. If the transition scale (the size of the biggest eddies in the flow) varies, we expect the first group of drifters ro reach the Richardson regime sooner despite slower growth, while the third group of drifters remain in exponential regime but still relatively close together, not yet having reached their larger transition threshold.</p>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [22]:</pre></div><div id="fc3b9272" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>index_plot_D <span class="op">=</span> [<span class="st">'(a)'</span>, <span class="st">'(b)'</span>, <span class="st">'(c)'</span>, <span class="st">'(d)'</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>index_plot_K <span class="op">=</span> [<span class="st">'(a)'</span>, <span class="st">'(b)'</span>, <span class="st">'(c)'</span>, <span class="st">'(d)'</span>]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>datasets <span class="op">=</span> [</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    (Ds_1, Ks_1, mask_pair_1, ts_1, interpolated_trajs_1),</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    (Ds_2, Ks_2, mask_pair_2, ts_2, interpolated_trajs_2),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    (Ds_3, Ks_3, mask_pair_3, ts_3, interpolated_trajs_3),</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    (Ds_4, Ks_4, mask_pair_4, ts_4, interpolated_trajs_4)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div></div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [23]:</pre></div><div id="cell-fig-pair-dispersion" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create first figure for pair dispersion (2x2 grid)</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>fig1, axes1 <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">14</span>))</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>axes1 <span class="op">=</span> axes1.flatten()</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, (Ds, Ks, mask_pair, ts, interpolated_trajs) <span class="kw">in</span> <span class="bu">enumerate</span>(datasets):</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> axes1[idx]</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="bu">len</span>(interpolated_trajs)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    N_pairs <span class="op">=</span> <span class="bu">int</span>(N<span class="op">*</span>(N<span class="op">-</span><span class="dv">2</span>)<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Pair dispersion vs time</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N_pairs):</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>            t_pair <span class="op">=</span> ts[mask_pair[i]]</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>            t_pair <span class="op">=</span> t_pair[:<span class="op">-</span><span class="dv">1</span>].astype(<span class="bu">int</span>) <span class="op">-</span> np.datetime64(t_pair[<span class="dv">0</span>]).astype(<span class="bu">int</span>)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>            t_pair_days <span class="op">=</span> t_pair<span class="op">/</span>(<span class="dv">24</span><span class="op">*</span><span class="dv">60</span><span class="op">*</span><span class="dv">60</span>)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>            ax.plot(t_pair_days, Ds[i]<span class="op">**</span><span class="dv">2</span>, c<span class="op">=</span>cmap((i<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span>N_pairs), marker<span class="op">=</span><span class="st">'o'</span>,</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>                   markersize<span class="op">=</span><span class="dv">5</span>, linestyle<span class="op">=</span><span class="st">''</span>, label<span class="op">=</span><span class="bu">str</span>(i))</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span>:</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">pass</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx<span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># First deployment</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>        t_exponential_1 <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">13</span>, <span class="dv">100</span>)</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>        d_law_exponential_1 <span class="op">=</span> np.exp(t_exponential_1)<span class="op">/</span>np.exp(<span class="op">-</span><span class="dv">8</span>)</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>        ax.plot(t_exponential_1, d_law_exponential_1, <span class="st">'--'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>        t_richardson_1 <span class="op">=</span> np.linspace(<span class="dv">16</span>, <span class="dv">100</span>, <span class="dv">100</span>)</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>        ax.plot(t_richardson_1, t_richardson_1<span class="op">**</span><span class="dv">3</span><span class="op">/</span>np.exp(<span class="op">-</span><span class="dv">13</span>), <span class="st">'-'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.27</span>, <span class="fl">0.45</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto e^t$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.67</span>, <span class="fl">0.90</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto t^3$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx<span class="op">==</span><span class="dv">2</span>:</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Third deployment</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>        a_3 <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>        t_exponential_3 <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">55</span>, <span class="dv">100</span>)</span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>        d_law_exponential_3 <span class="op">=</span> np.exp(t_exponential_3<span class="op">/</span>a_3)<span class="op">/</span>np.exp(<span class="op">-</span><span class="dv">12</span>)</span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>        ax.plot(t_exponential_3, d_law_exponential_3, <span class="st">'--'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>        <span class="co"># t_richardson = np.linspace(0, 100, 100)</span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ax.plot(t_richardson, t_richardson**3/np.exp(-8), '-', c = 'mediumvioletred', linewidth=2)</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ax.plot(t_richardson, t_richardson/np.exp(-13), ':', c = 'mediumvioletred', linewidth=2)</span></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.80</span>, <span class="fl">0.75</span>, <span class="vs">r'</span><span class="dv">$</span><span class="er">\</span><span class="vs">propto e</span><span class="dv">^</span><span class="vs">{</span><span class="ch">\a</span><span class="vs">lpha t}</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>        <span class="co">#ax.text(0.67, 0.90, '$\propto t^3$', fontsize=20, transform=ax.transAxes, c= 'mediumvioletred')</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add letter annotation in upper left corner</span></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">0.05</span>, <span class="fl">0.96</span>, index_plot_D[idx], transform<span class="op">=</span>ax.transAxes, </span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">20</span>, va<span class="op">=</span><span class="st">'top'</span>, ha<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>    ax.set_xscale(<span class="st">'log'</span>)</span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>    ax.set_yscale(<span class="st">'log'</span>)</span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>    ax.grid(alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(xmin<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add labels to bottom row</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx <span class="op">&gt;=</span> <span class="dv">2</span>:</span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'time since release [days]'</span>)</span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add labels to left column</span></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">'pair dispersion $D^2$ [m$^2$]'</span>)</span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-pair-dispersion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pair-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
+<a href="03_results_files/figure-html/fig-pair-dispersion-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Pair dispersion for each deployment as a function of the time since release. The colors represent the different pairs. The pink dashed line shows the scaling corresponding to the exponential regime and the solid pink line represents the scaling of the richardson regime."><img src="03_results_files/figure-html/fig-pair-dispersion-output-1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pair-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Pair dispersion for each deployment as a function of the time since release. The colors represent the different pairs. The pink dashed line shows the scaling corresponding to the exponential regime and the solid pink line represents the scaling of the richardson regime.
+</figcaption>
+</figure>
+</div>
+</div>
+</div></div>
+<div id="3a12f0ea" class="cell markdown">
+<p>The rate of change of separation, or pair diffusivity, has been calculated using <strong>?@eq-diffusivity</strong> and is shown in <a href="#fig-pair-diffusivity" class="quarto-xref">Figure&nbsp;7</a>. Both regimes are shown for all deployments. For the first one, it does not seem to be so clear that there are two regimes, as it was in <a href="#fig-pair-dispersion" class="quarto-xref">Figure&nbsp;6</a> (a). The third one, however, shows one clear tendency where <span class="math inline">\(K \propto D^2\)</span>. The second and fourth deployment do not have enough data to determine the regime that governs its dynamics.</p>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [25]:</pre></div><div id="cell-fig-pair-diffusivity" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create second figure for diffusivity (2x2 grid)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>fig2, axes2 <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">14</span>))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>axes2 <span class="op">=</span> axes2.flatten()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, (Ds, Ks, mask_pair, ts, interpolated_trajs) <span class="kw">in</span> <span class="bu">enumerate</span>(datasets):</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> axes2[idx]</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="bu">len</span>(interpolated_trajs)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    N_pairs <span class="op">=</span> <span class="bu">int</span>(N<span class="op">*</span>(N<span class="op">-</span><span class="dv">2</span>)<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Diffusivity vs pair separation</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N_pairs):</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        ax.plot(Ds[i], Ks[i], c<span class="op">=</span>cmap((i<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span>(N_pairs<span class="op">+</span><span class="dv">1</span>)), marker<span class="op">=</span><span class="st">'o'</span>,</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>               markersize<span class="op">=</span><span class="dv">5</span>, linestyle<span class="op">=</span><span class="st">''</span>, label<span class="op">=</span><span class="bu">str</span>(i))</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx<span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Frist deployment</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        d_k_exponential_1 <span class="op">=</span> np.arange(<span class="dv">10</span>, np.sqrt(np.exp(t_exponential_1[<span class="op">-</span><span class="dv">1</span>])),<span class="dv">100</span>)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>        ax.plot(d_k_exponential_1, d_k_exponential_1<span class="op">/</span>np.exp(<span class="fl">4.3</span>), <span class="st">'--'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>        d_k_richardson_1 <span class="op">=</span> np.arange(<span class="dv">10</span>, <span class="fl">0.75</span><span class="op">*</span><span class="fl">10e5</span>, <span class="dv">100</span>)</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>        ax.plot(d_k_richardson_1, d_k_richardson_1<span class="op">**</span>(<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>)<span class="op">/</span>np.exp(<span class="dv">5</span>), <span class="st">'-'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.39</span>, <span class="fl">0.45</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto D^2$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.67</span>, <span class="fl">0.84</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto D^{4/3}$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx<span class="op">==</span><span class="dv">1</span>:</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Second deployment</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>        d_k_2 <span class="op">=</span> np.arange(<span class="dv">100</span>, <span class="dv">4</span><span class="op">*</span><span class="fl">10e4</span>,<span class="dv">100</span>)</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>        ax.plot(d_k_2, d_k_2<span class="op">/</span>np.exp(<span class="fl">4.3</span>), <span class="st">'--'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>        ax.plot(d_k_2, d_k_2<span class="op">**</span>(<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>)<span class="op">/</span>np.exp(<span class="dv">5</span>), <span class="st">'-'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.8</span>, <span class="fl">0.68</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto D^2$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.67</span>, <span class="fl">0.84</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto D^{4/3}$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx<span class="op">==</span><span class="dv">2</span>:</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Third deployment</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>        d_k_exponential_3 <span class="op">=</span> np.arange(<span class="dv">10</span>, np.sqrt(np.exp(t_exponential_3[<span class="op">-</span><span class="dv">1</span>]<span class="op">/</span>a_3)),<span class="dv">100</span>)</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>        ax.plot(d_k_exponential_3, d_k_exponential_3<span class="op">/</span>np.exp(<span class="fl">4.3</span>), <span class="st">'--'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>        d_k_richardson_3 <span class="op">=</span> np.arange(<span class="dv">10</span>, <span class="fl">10e4</span>, <span class="dv">100</span>)</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>        ax.plot(d_k_richardson_3, d_k_richardson_3<span class="op">**</span>(<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>)<span class="op">/</span>np.exp(<span class="dv">5</span>), <span class="st">'-'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.14</span>, <span class="fl">0.29</span>, <span class="vs">r'</span><span class="dv">$</span><span class="er">\</span><span class="vs">propto D</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.67</span>, <span class="fl">0.84</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto D^{4/3}$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx<span class="op">==</span><span class="dv">3</span>:</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Fourth deployment</span></span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>        d_k_2 <span class="op">=</span> np.arange(<span class="dv">100</span>, <span class="dv">4</span><span class="op">*</span><span class="fl">10e4</span>,<span class="dv">100</span>)</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>        ax.plot(d_k_2, d_k_2<span class="op">/</span>np.exp(<span class="fl">4.3</span>), <span class="st">'--'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>        ax.plot(d_k_2, d_k_2<span class="op">**</span>(<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>)<span class="op">/</span>np.exp(<span class="dv">5</span>), <span class="st">'-'</span>, c <span class="op">=</span> <span class="st">'mediumvioletred'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.8</span>, <span class="fl">0.68</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto D^2$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.67</span>, <span class="fl">0.84</span>, <span class="st">'$</span><span class="er">\</span><span class="st">propto D^{4/3}$'</span>, fontsize<span class="op">=</span><span class="dv">20</span>, transform<span class="op">=</span>ax.transAxes, c<span class="op">=</span> <span class="st">'mediumvioletred'</span>)</span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">0.05</span>, <span class="fl">0.96</span>, index_plot_D[idx], transform<span class="op">=</span>ax.transAxes, </span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">20</span>, va<span class="op">=</span><span class="st">'top'</span>, ha<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a>    ax.set_xscale(<span class="st">"log"</span>)</span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>    ax.set_yscale(<span class="st">"log"</span>)</span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>    ax.grid(alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add labels to bottom row</span></span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx <span class="op">&gt;=</span> <span class="dv">2</span>:</span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'pair separation $D$ [m]'</span>)</span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add labels to left column</span></span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">'drifter diffusivity $K$ [m$^2$/s]'</span>)</span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-pair-diffusivity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pair-diffusivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
+<a href="03_results_files/figure-html/fig-pair-diffusivity-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Pair diffusivity as a function of the distance between pairs. The colors represent the different pairs. The pink dashed line shows the scaling corresponding to the exponential regime and the solid pink line represents the scaling of the richardson regime."><img src="03_results_files/figure-html/fig-pair-diffusivity-output-1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pair-diffusivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Pair diffusivity as a function of the distance between pairs. The colors represent the different pairs. The pink dashed line shows the scaling corresponding to the exponential regime and the solid pink line represents the scaling of the richardson regime.
+</figcaption>
+</figure>
+</div>
+</div>
+</div></div>
+     </main>
+<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script> 
+  
+</body></html>
