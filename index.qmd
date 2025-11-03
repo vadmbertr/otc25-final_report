@@ -16,6 +16,8 @@ bibliography: references.bib
 csl: https://www.zotero.org/styles/american-geophysical-union
 ---
 
+{{< pagebreak >}}
+
 {{< include sections/01_introduction.qmd >}}
 {{< embed sections/02_methods.ipynb >}}
 {{< embed sections/03_results.ipynb >}}
@@ -23,3 +25,9 @@ csl: https://www.zotero.org/styles/american-geophysical-union
 {{< include sections/05_conclusion.qmd >}}
 {{< include sections/06_acknowledgements.qmd >}}
 
+{{< pagebreak >}}
+
+## References {.unnumbered .unlisted}
+
+::: {#refs}
+:::
