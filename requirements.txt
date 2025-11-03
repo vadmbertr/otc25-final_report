@@ -1,0 +1,16 @@
+cartopy
+clouddrift
+cmocean
+copernicusmarine
+diffra
+equinox
+interpax
+jax
+jaxparrow
+jaxtyping
+jupyterlab
+matplotlib
+numpy
+pandas
+pastax
+xarray
