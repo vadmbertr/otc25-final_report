@@ -1,0 +1,50 @@
+name: Render and Publish Quarto Manuscript (Python with cache)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "latest"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Restore Quarto freeze cache
+        uses: actions/cache@v4
+        with:
+          path: _freeze
+          key: quarto-freeze-${{ runner.os }}-${{ hashFiles('**/*.qmd') }}
+          restore-keys: |
+            quarto-freeze-${{ runner.os }}-
+
+      - name: Render Quarto manuscript (HTML + PDF)
+        run: quarto render
+
+      - name: Publish to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          path: _manuscript
