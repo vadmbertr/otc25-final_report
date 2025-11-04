@@ -221,7 +221,7 @@
   <li><a href="#sec-model-drif-traj" id="toc-sec-model-drif-traj" class="nav-link" data-scroll-target="#sec-model-drif-traj">Modeling of drifter trajectories</a></li>
   <li><a href="#sec-linear-combination" id="toc-sec-linear-combination" class="nav-link" data-scroll-target="#sec-linear-combination">Linear combination</a></li>
   <li><a href="#sec-mr-framework" id="toc-sec-mr-framework" class="nav-link" data-scroll-target="#sec-mr-framework">Maxey-Riley framework</a></li>
-  <li><a href="#model-evaluation" id="toc-model-evaluation" class="nav-link" data-scroll-target="#model-evaluation">Model evaluation</a></li>
+  <li><a href="#sec-model-eval" id="toc-sec-model-eval" class="nav-link" data-scroll-target="#sec-model-eval">Model evaluation</a></li>
   <li><a href="#pair-dispersion" id="toc-pair-dispersion" class="nav-link" data-scroll-target="#pair-dispersion">Pair dispersion</a></li>
   </ul>
 </nav>
@@ -929,7 +929,7 @@ f \mathbf{k} \times \mathbf{u}_g = -g \nabla \eta
 \tag{5}\]</span></span> where <span class="math inline">\(\mathbf{1}_{S} = 1\)</span> (resp. <span class="math inline">\(\mathbf{1}_{M} = 1\)</span>) if the drifter is a SPOT (resp. MELODI) and <span class="math inline">\(0\)</span> otherwise.</p>
 <p><span class="math inline">\(\widehat{A}_z, \widehat{\beta}_{w_S}, \widehat{\beta}_{w_M}\)</span> are estimated by solving a non-negative-least-square problem between two consecutive drifter observations, provided that the observations are sufficiently close in time: <span id="eq-nnls"><span class="math display">\[
 \widehat{A}_z, \widehat{\beta}_{w_S}, \widehat{\beta}_{w_M} = \underset{A_z, \beta_{w_S}, \beta_{w_M} \geq 0}{\arg\min} \sum_i D(\mathbf{X}_{t_i} + \Delta t_i \mathbf{v}_d(t_i, \mathbf{X}_{t_i} ; \beta_w), \mathbf{X}_{t_{i+1}})^2
-\tag{6}\]</span></span> where <span class="math inline">\(\mathbf{X}_{t_i}\)</span> is an observed drifter position at time <span class="math inline">\(t_i\)</span> and <span class="math inline">\(\Delta_{t_i} = t_{i+1} - t_i\)</span> is the time interval between observations <span class="math inline">\(\mathbf{X}_{t_i}\)</span> and <span class="math inline">\(\mathbf{X}_{t_{i+1}}\)</span>.</p>
+\tag{6}\]</span></span> where <span class="math inline">\(\mathbf{X}_{t_i}\)</span> is an observed drifter position at time <span class="math inline">\(t_i\)</span>, <span class="math inline">\(\Delta_{t_i} = t_{i+1} - t_i\)</span> is the time interval between observations <span class="math inline">\(\mathbf{X}_{t_i}\)</span> and <span class="math inline">\(\mathbf{X}_{t_{i+1}}\)</span>, and <span class="math inline">\(D\)</span> is the separation distance introduced later in <a href="#sec-model-eval" class="quarto-xref">Section&nbsp;3.3</a>.</p>
 </section>
 </section>
 </div>
@@ -988,8 +988,8 @@ a_n = \sqrt{\frac{2R_D H_D}{\pi}}, \quad a_s = R_D, \quad \text{and} \quad a_v =
 </section>
 </div>
 <div id="abd50659" class="cell markdown">
-<section id="model-evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="model-evaluation">Model evaluation</h3>
+<section id="sec-model-eval" class="level3">
+<h3 class="anchored" data-anchor-id="sec-model-eval">Model evaluation</h3>
 <p>To evaluate the performance of the trajectory reconstruction methods, we integrate the models over N days using the drifter positions as initial conditions. We then compare the reconstructed trajectories with the observed drifter trajectories using the following metrics:</p>
 <ul>
 <li><strong>Separation distance</strong>: the separation distance is the distance <span class="math inline">\(D(\mathbf{X}_{t_i}, \mathbf{Y}_{t_i})\)</span> between the reconstructed final position <span class="math inline">\(\mathbf{X}_T\)</span> and the drifter’s final position <span class="math inline">\(\mathbf{Y}_T\)</span>. We used the Haversine formula to compute the great-circle distance between two positions, assuming the Earth is a perfect sphere.</li>

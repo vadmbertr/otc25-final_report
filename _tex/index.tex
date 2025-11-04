@@ -139,6 +139,21 @@
 
 
 \makeatletter
+\def\title#1{\global\c@footnote=0\relax%
+{\centering \Large\bf #1 \vskip14pt}
+\def\thetitle{#1}}
+
+\def\authors#1{{\centering \normalsize\bf #1\vskip12pt}}
+\def\affil#1{$^{#1}$\ignorespaces}
+\def\affiliation#1#2{\vskip-.5\parskip\relax{\centering{\footnotesize
+$^{#1}$#2\relax}\vskip-\parskip}}
+
+\def\correspondingauthor#1#2{{\let\@thefnmark\relax\@footnotetext{\noindent\vrule
+height 18pt width0pt\relax\hbox to-8pt{}{\small
+Corresponding author: #1,
+{\tt #2}}}}}
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -192,13 +207,17 @@
   pdfcreator={LaTeX via pandoc}}
 
 
+
+\begin{document}
 \title{\textbf{Modeling drifter trajectories and ensemble dispersion
 from the Ocean Training Course 2025}}
-\author{Samantha Kucher \and Vadim Bertrand}
-\date{}
-\begin{document}
-\maketitle
 
+\authors{Samantha Kucher\affil{1}, Vadim Bertrand\affil{2}}
+\affiliation{1}{MSC, Université Paris Cité, }\affiliation{2}{IGE,
+Université Grenoble Alpes, }
+\correspondingauthor{Samantha
+Kucher}{samanthakucher@gmail.com}\correspondingauthor{Vadim
+Bertrand}{vadim.bertrand@univ-grenoble-alpes.fr}
 \renewcommand*\contentsname{Table of contents}
 {
 \hypersetup{linkcolor=}
@@ -680,9 +699,10 @@ sufficiently close in time:
 \begin{equation}\phantomsection\label{eq-nnls}{
 \widehat{A}_z, \widehat{\beta}_{w_S}, \widehat{\beta}_{w_M} = \underset{A_z, \beta_{w_S}, \beta_{w_M} \geq 0}{\arg\min} \sum_i D(\mathbf{X}_{t_i} + \Delta t_i \mathbf{v}_d(t_i, \mathbf{X}_{t_i} ; \beta_w), \mathbf{X}_{t_{i+1}})^2
 }\end{equation} where \(\mathbf{X}_{t_i}\) is an observed drifter
-position at time \(t_i\) and \(\Delta_{t_i} = t_{i+1} - t_i\) is the
-time interval between observations \(\mathbf{X}_{t_i}\) and
-\(\mathbf{X}_{t_{i+1}}\).
+position at time \(t_i\), \(\Delta_{t_i} = t_{i+1} - t_i\) is the time
+interval between observations \(\mathbf{X}_{t_i}\) and
+\(\mathbf{X}_{t_{i+1}}\), and \(D\) is the separation distance
+introduced later in Section~\ref{sec-model-eval}.
 
 \subsubsection{Maxey-Riley framework}\label{sec-mr-framework}
 
@@ -814,7 +834,7 @@ two-dimensional system in \(x\) and does not require specification of
 the initial velocity for resolution. This is the equation we used to
 model the trajectory of the drifters deployed during the campaign.
 
-\subsubsection{Model evaluation}\label{model-evaluation}
+\subsubsection{Model evaluation}\label{sec-model-eval}
 
 To evaluate the performance of the trajectory reconstruction methods, we
 integrate the models over N days using the drifter positions as initial
@@ -1004,19 +1024,19 @@ winds and currents, another possible explaination for this discrepancy
 could be an inacurrate representation of the wind-current interactions.
 This results in a final separation distance of approximately 29 km after
 7 days, and a Liu Index of 0.23, indicating that the estimation
-separates four times more slowly than the drifter moves.
+separates four times slower than the drifter moves.
 
 The trajectory reconstructed off the Portuguese coast (left panel of
 Figure~\ref{fig-lin-comb-est}) shows a larger deviation from the true
 drifter trajectory, with a final separation distance of approximately 76
 km and a Liu index of 0.32. By looking at Figure~\ref{fig-lin-comb-est},
 it appears that the drifter followed a small-scale structure heading
-South-South-East and not captured by satellite-derived observations
+South-South-West and not captured by satellite-derived observations
 products, while the reconstruction follows a current oriented slightly
-more to the West.
+more to the East.
 
 Finally, the trajectory reconstructed in the Balearic Sea (bottom right
-panel of Figure~\ref{fig-lin-comb-est}) shows an averall very good
+panel of Figure~\ref{fig-lin-comb-est}) shows an overall very good
 agreement with the true drifter trajectory, with a final separation
 distance of approximately 35 km but more importantly a Liu index of 0.1,
 meaning that the distance between the estimation and the reference grows
@@ -1245,7 +1265,7 @@ regime.}
 \end{figure}%
 
 \textsubscript{Source:
-\href{https://vadmbertr.github.io/otc25-final_report/sections/03_results-preview.html\#64df361f}{Results}}
+\href{https://vadmbertr.github.io/otc25-final_report/sections/03_results-preview.html\#527b5cf9-3aa0-4dbc-ad8f-82ad0d7537bc}{Results}}
 
 \section{Discussion}\label{sec-disc}
 
@@ -1283,7 +1303,7 @@ By nature the linear combination model has a limited expressive power as
 it assumes that the drifter velocity is a weighted sum of only four
 components: the cylogeostrophic current, the Ekman current, the Stokes
 drift, and the leeway. We choose to parameterize and calibrate some of
-this terms but from the drifter GPS data, but assessing their estimated
+this terms from the drifter GPS data, but assessing their estimated
 values is not trivial. Some of the drifter deployments during the
 campaign were filmed using drones, which could be used to validate or
 better estimate some estimated parameters, especially the windage
