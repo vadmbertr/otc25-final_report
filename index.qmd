@@ -2,11 +2,13 @@
 title: "**Modeling drifter trajectories and ensemble dispersion from the Ocean Training Course 2025**"
 authors:
   - name: Samantha Kucher
+    email: samanthakucher@gmail.com
     affiliations: 
       - name: MSC, Université Paris Cité
     roles: writing
     corresponding: true
   - name: Vadim Bertrand
+    email: vadim.bertrand@univ-grenoble-alpes.fr
     affiliations: 
       - name: IGE, Université Grenoble Alpes
     roles: writing

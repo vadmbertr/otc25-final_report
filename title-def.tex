@@ -1,0 +1,15 @@
+\makeatletter
+\def\title#1{\global\c@footnote=0\relax%
+{\centering \Large\bf #1 \vskip14pt}
+\def\thetitle{#1}}
+
+\def\authors#1{{\centering \normalsize\bf #1\vskip12pt}}
+\def\affil#1{$^{#1}$\ignorespaces}
+\def\affiliation#1#2{\vskip-.5\parskip\relax{\centering{\footnotesize
+$^{#1}$#2\relax}\vskip-\parskip}}
+
+\def\correspondingauthor#1#2{{\let\@thefnmark\relax\@footnotetext{\noindent\vrule
+height 18pt width0pt\relax\hbox to-8pt{}{\small
+Corresponding author: #1,
+{\tt #2}}}}}
+\makeatother

@@ -21,6 +21,10 @@ format:
     number-sections: true
     colorlinks: true
     keep-tex: true
+    include-in-header: title-def.tex
+    template-partials:
+      - title.tex
+      - before-body.tex
 
 execute:
   freeze: true
